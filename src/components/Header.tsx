@@ -1,11 +1,14 @@
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import logo from "@/assets/images/header-logo.png";
+import logo from "@/assets/images/logo.png";
 
 const navLinks = [
   { label: "Home", href: "#" },
   { label: "Investments", href: "#" },
-  { label: "Loans", href: "#" },
+  {
+    label: "Loans",
+    href: "https://digital.foundry-platform.com/ubuntu-capital",
+  },
   { label: "About Us", href: "#" },
   { label: "Our Team", href: "#" },
   { label: "Support", href: "#" },
@@ -21,7 +24,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8 text-sm font-medium text-gray-700">
+        <nav className="hidden md:flex space-x-8 text-sm font-normal text-gray-700">
           {navLinks.map((link) => (
             <a
               key={link.label}
