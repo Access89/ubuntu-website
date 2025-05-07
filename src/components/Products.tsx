@@ -22,7 +22,7 @@ const services = [
 
 export default function Products() {
   return (
-    <section className="bg-white py-16 px-6 md:px-12">
+    <section className="bg-white py-16 px-6 md:px-12 border-y border-[#E5E5E5]">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-12">
         {/* Left Section */}
         <div className="w-full lg:w-1/2 space-y-6">
@@ -35,7 +35,7 @@ export default function Products() {
             <br className="hidden md:block" />
             to help you manage your finances effectively.
           </p>
-          <button className="inline-flex items-center px-6 py-3 bg-[#225EA6] text-white text-lg md:text-xl rounded-full font-medium hover:bg-[#225EA6]/80 transition">
+          <button className="inline-flex items-center px-6 lg:px-10 lg:py-4 py-3 bg-[#225EA6] text-white text-lg md:text-xl rounded-full font-medium hover:bg-[#225EA6]/80 transition">
             Learn More <ArrowRight className="ml-2 w-4 h-4" />
           </button>
         </div>

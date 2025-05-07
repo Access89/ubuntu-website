@@ -47,7 +47,7 @@ export default function ImpactSection() {
               <p className="text-lg text-gray-500">Current Money Managed</p>
             </div>
             <div className="col-span-1 sm:col-span-2 mt-4">
-              <button className="inline-flex items-center px-6 py-3 border border-gray-900 text-gray-900 rounded-full text-sm font-medium hover:bg-gray-900 hover:text-white transition duration-300">
+              <button className="inline-flex items-center px-6 lg:w-1/2 lg:px-12 py-3 lg:py-4 border sm:text-sm lg:text-xl border-gray-900 text-gray-900 rounded-full font-medium hover:bg-gray-900 hover:text-white transition duration-300">
                 Get Started <ArrowRight className="ml-2 w-4 h-4" />
               </button>
             </div>

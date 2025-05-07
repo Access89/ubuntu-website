@@ -25,7 +25,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative pt-24 md:pt-5 pb-32">
+    <section className="relative pt-24 md:pt-0 pb-32 md:pb-0">
       {/* Hero Image */}
       <div className="relative w-full">
         <img
