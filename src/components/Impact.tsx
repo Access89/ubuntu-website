@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 export default function ImpactSection() {
   return (
     <section className="bg-white py-16 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto space-y-12">
+      <div className="max-w-7xl mx-auto space-y-6">
         {/* Top: Stats Section */}
         {/* Image + Heading */}
         <div className="flex flex-col items-start gap-6 w-full lg:w-auto">
