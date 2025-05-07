@@ -17,7 +17,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img
-            src="/src/assets/images/logo.png"
+            src="/src/assets/images/header-logo.png"
             alt="Ubuntu Capital Logo"
             className="h-12 w-auto"
           />
