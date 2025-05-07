@@ -1,3 +1,5 @@
+import impact from "../assets/images/impact.png";
+
 import { ArrowRight } from "lucide-react";
 
 export default function ImpactSection() {
@@ -13,7 +15,7 @@ export default function ImpactSection() {
         </div>
         <div className="flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-40 items-start">
           <img
-            src="src/assets/impact.png"
+            src={impact}
             alt="Business meeting"
             className="w-auto max-h-[450px] rounded-xl object-cover"
           />

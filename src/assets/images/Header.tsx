@@ -1,6 +1,6 @@
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import logo from "@/assets/header-logo.png";
+import logo from "@/assets/images/header-logo.png";
 
 const navLinks = [
   { label: "Home", href: "#" },

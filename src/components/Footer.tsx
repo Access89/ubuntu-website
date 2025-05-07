@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react";
+import logo from "@/assets/images/logo.png";
 
 const quickLinks = [
   { label: "Home", href: "#" },
@@ -20,11 +21,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto py-16 border-b border-white/50 px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
         {/* Logo */}
         <div className="col-span-1">
-          <img
-            src="src/assets/logo.png"
-            alt="Logo"
-            className="h-12 sm:h-16 mb-4"
-          />
+          <img src={logo} alt="Logo" className="h-12 sm:h-16 mb-4" />
         </div>
 
         {/* Contact Info */}
