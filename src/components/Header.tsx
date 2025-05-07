@@ -43,12 +43,12 @@ export default function Header() {
             <SheetTrigger>
               <Menu className="h-6 w-6 text-gray-700" />
             </SheetTrigger>
-            <SheetContent side="left" className="w-64 p-6  bg-white">
+            <SheetContent side="left" className="w-1/2 min-w-64 p-6  bg-white">
               <div className="mb-4">
                 <img
                   src="/src/assets/header-logo.png"
                   alt="Ubuntu Capital Logo"
-                  className="h-6"
+                  className="h-12"
                 />
               </div>
               <nav className="flex flex-col space-y-4 text-gray-700 font-medium">
@@ -56,7 +56,7 @@ export default function Header() {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="hover:text-blue-600 transition-colors"
+                    className="hover:text-blue-600 font-light transition-colors"
                   >
                     {link.label}
                   </a>

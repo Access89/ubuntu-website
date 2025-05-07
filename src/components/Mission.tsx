@@ -1,8 +1,8 @@
 export default function Mission() {
   return (
-    <section className="min-h-screen w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-6 md:px-10 lg:px-16 py-12 bg-white">
+    <section className="lg:min-h-[90vh] w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-6 md:px-10 lg:px-16 py-12 bg-white">
       {/* Left - Logo / Brand */}
-      <div className="text-[#754C2A] text-left lg:w-1/2">
+      <div className="hidden lg:block text-[#754C2A] text-left lg:w-1/2">
         <div className="border-l-4 md:border-l-7 border-[#754C2A] pl-4 md:pl-6">
           <h1 className="text-5xl md:text-6xl lg:text-8xl font-light leading-tight">
             The

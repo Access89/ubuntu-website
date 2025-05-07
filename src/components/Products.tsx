@@ -45,7 +45,7 @@ export default function Products() {
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="flex flex-col gap-6 bg-[#A9CAF2]/50 rounded-3xl px-6 py-10 items-start hover:shadow-lg transition duration-300 h-[300px] "
+              className="flex flex-col gap-6 bg-[#A9CAF2]/50 rounded-3xl px-6 py-10 items-start hover:shadow-lg transition duration-300 h-[250px] lg:h-[300px] "
             >
               <div className="bg-white p-3 rounded-2xl">
                 <Icon icon={service.icon} className="w-8 h-8 text-[#225EA6]" />

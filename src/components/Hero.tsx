@@ -38,7 +38,7 @@ export default function Hero() {
         />
 
         {/* Cards */}
-        <div className="relative md:absolute inset-x-0 bottom-20 max-w-7xl lg:w-[70%]  mx-auto grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-6 px-4 z-20">
+        <div className="relative md:absolute inset-x-0 md:bottom-10 xl:bottom-20 max-w-7xl lg:w-[70%]  mx-auto grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-6 px-4 z-20">
           {cards.map((card, index) => (
             <div
               key={index}
