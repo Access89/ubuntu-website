@@ -38,7 +38,7 @@ export default function Products() {
             <br className="hidden md:block" />
             to help you manage your finances effectively.
           </p>
-          <button className="inline-flex items-center px-6 lg:px-10 lg:py-4 py-3 bg-[#225EA6] text-white text-lg md:text-xl rounded-full font-medium hover:bg-[#225EA6]/80 transition">
+          <button className="inline-flex items-center px-6 lg:px-10 lg:py-4 py-3 bg-[#225EA6] text-white text-base md:text-lg lg:text-xl rounded-full font-medium hover:bg-[#225EA6]/80 transition">
             Learn More <ArrowRight className="ml-2 w-4 h-4" />
           </button>
         </div>

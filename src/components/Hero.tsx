@@ -25,7 +25,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative pt-24 md:pt-0 pb-32 md:pb-0">
+    <section className="relative pt-24 md:pt-0 pb-32 md:pb-5">
       {/* Hero Image */}
       <div className="relative w-full">
         <img
@@ -42,11 +42,11 @@ export default function Hero() {
         />
 
         {/* Cards */}
-        <div className="relative md:absolute inset-x-0 md:bottom-10 xl:bottom-20 max-w-7xl lg:w-[70%]  mx-auto grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-6 px-4 z-20">
+        <div className="relative md:absolute inset-x-0 md:bottom-10 xl:bottom-20 max-w-7xl lg:w-[65%]  mx-auto grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-4 px-4 z-20">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-4xl p-6 max-w-sm h-full  w-full sm:w-auto border border-[#ACACAC]/50"
+              className="bg-white shadow-lg rounded-4xl px-6 py-5 max-w-sm h-full  w-full sm:w-auto border border-[#ACACAC]/50"
             >
               <div className="text-blue-600 text-2xl mb-3"></div>
               <img src={checkIcon} alt="icon" className="w-5 h-5 mb-3" />
