@@ -1,5 +1,6 @@
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import logo from "@/assets/header-logo.png";
 
 const navLinks = [
   { label: "Home", href: "#" },
@@ -16,11 +17,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <img
-            src="/src/assets/header-logo.png"
-            alt="Ubuntu Capital Logo"
-            className="h-12 w-auto"
-          />
+          <img src={logo} alt="Ubuntu Capital Logo" className="h-12 w-auto" />
         </div>
 
         {/* Desktop Navigation */}
@@ -45,11 +42,7 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="left" className="w-1/2 min-w-64 p-6  bg-white">
               <div className="mb-4">
-                <img
-                  src="/src/assets/header-logo.png"
-                  alt="Ubuntu Capital Logo"
-                  className="h-12"
-                />
+                <img src={logo} alt="Ubuntu Capital Logo" className="h-12" />
               </div>
               <nav className="flex flex-col space-y-4 text-gray-700 font-medium">
                 {navLinks.map((link) => (
