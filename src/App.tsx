@@ -14,10 +14,12 @@ function App() {
       <main>
         <Hero />
         <Products />
-        <Impact />
-        <CallToAction />
-        <Mission />
-        <FAQ />
+        <div className="max-w-7xl mx-auto">
+          <Impact />
+          <CallToAction />
+          <Mission />
+          <FAQ />
+        </div>
       </main>
       <Footer />
     </div>

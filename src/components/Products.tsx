@@ -1,23 +1,59 @@
-import React from "react";
+import { ArrowRight } from "lucide-react";
+import { Icon } from "@iconify/react";
 
-const products = [
-  { title: "Ubuntu Fixed Deposit Investment", icon: "💰" },
-  { title: "Ubuntu Future Investment Plan", icon: "📈" },
-  { title: "Salaried Loans", icon: "💳" },
-  { title: "Ubuntu Capital FastSME Loans", icon: "🏦" },
+const services = [
+  {
+    title: "Ubuntu Fixed Deposit Investment",
+    icon: "ri:wallet-line",
+  },
+  {
+    title: "Ubuntu Future Investment Plan",
+    icon: "fluent:data-trending-16-regular",
+  },
+  {
+    title: "Salaried Loans",
+    icon: "ri:money-dollar-circle-line",
+  },
+  {
+    title: "Ubuntu Capital FastSME Loans",
+    icon: "carbon:global-loan-and-trial",
+  },
 ];
 
 export default function Products() {
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-2">Browse our set of products and services</h2>
-        <p className="text-gray-600 mb-8">We offer a variety of tools and resources to help you manage your finances effectively.</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((p, i) => (
-            <div key={i} className="bg-blue-50 rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition">
-              <div className="text-4xl mb-4">{p.icon}</div>
-              <div className="text-lg font-semibold text-center">{p.title}</div>
+    <section className="bg-white py-16 px-6 md:px-12">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-12">
+        {/* Left Section */}
+        <div className="lg:w-1/2 space-y-6">
+          <h2 className="text-[4rem] font-bold leading-[110%] text-gray-900">
+            Browse our set of
+            <br /> products and services
+          </h2>
+          <p className="text-[#9E9E9E] font-[500] text-xl mb-10">
+            we offer a variety of tools and resources
+            <br />
+            to help you manage your finances effectively.
+          </p>
+          <button className="inline-flex items-center px-6 py-3 bg-[#225EA6] text-[#E1E4EA] text-[1.3rem] rounded-full font-medium hover:bg-[#225EA6]/80 transition">
+            Learn More <ArrowRight className="ml-2 w-4 h-4" />
+          </button>
+        </div>
+
+        {/* Right Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:w-1/2">
+          {services.map((service, idx) => (
+            <div
+              key={idx}
+              className="flex flex-col gap-8 bg-[#A9CAF2]/50 rounded-3xl h-[300px] px-6 py-12 items-start space-x-4 hover:shadow-lg transition"
+            >
+              <div className="bg-white p-3 rounded-2xl">
+                {/* {service.icon} */}
+                <Icon icon={service.icon} className="w-8 h-8 text-[#225EA6]" />
+              </div>
+              <div className="text-2xl font-[600] text-gray-900">
+                {service.title}
+              </div>
             </div>
           ))}
         </div>

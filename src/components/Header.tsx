@@ -1,39 +1,70 @@
-import React, { useState } from "react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 
 const navLinks = [
-  { name: "Home", href: "#" },
-  { name: "Investment", href: "#" },
-  { name: "Loan", href: "#" },
-  { name: "Join Now", href: "#" },
-  { name: "Our Team", href: "#" },
-  { name: "Support", href: "#" },
+  { label: "Home", href: "#" },
+  { label: "Investments", href: "#" },
+  { label: "Loans", href: "#" },
+  { label: "About Us", href: "#" },
+  { label: "Our Team", href: "#" },
+  { label: "Support", href: "#" },
 ];
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
-
   return (
-    <header className="w-full bg-white shadow-sm fixed z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
-        <div className="flex items-center">
-          <img src="/assets/logo.png" alt="Logo" className="h-8 w-auto" />
+    <header className="w-full">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <div className="flex items-center space-x-2">
+          <img
+            src="/src/assets/images/logo.png"
+            alt="Ubuntu Capital Logo"
+            className="h-12 w-auto"
+          />
         </div>
-        <nav className="hidden md:flex space-x-8">
-          {navLinks.map(link => (
-            <a key={link.name} href={link.href} className="text-gray-800 hover:text-blue-700 font-medium">{link.name}</a>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex space-x-8 text-sm font-medium text-gray-700">
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="hover:text-blue-600 transition-colors"
+            >
+              {link.label}
+            </a>
           ))}
         </nav>
-        <button className="md:hidden" onClick={() => setOpen(!open)}>
-          <span className="sr-only">Open menu</span>
-          <svg className="h-6 w-6" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
-        </button>
-        {open && (
-          <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center md:hidden">
-            {navLinks.map(link => (
-              <a key={link.name} href={link.href} className="py-2 text-gray-800 hover:text-blue-700 w-full text-center">{link.name}</a>
-            ))}
-          </div>
-        )}
+        <div></div>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <Sheet>
+            <SheetTrigger>
+              <Menu className="h-6 w-6 text-gray-700" />
+            </SheetTrigger>
+            <SheetContent side="left" className="w-64 p-6  bg-white">
+              <div className="mb-4">
+                <img
+                  src="/src/assets/images/logo.png"
+                  alt="Ubuntu Capital Logo"
+                  className="h-6"
+                />
+              </div>
+              <nav className="flex flex-col space-y-4 text-gray-700 font-medium">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );

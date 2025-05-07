@@ -1,29 +1,50 @@
-import React from "react";
+import { ArrowRight } from "lucide-react";
 
-const metrics = [
-  { value: "100K", label: "Customer" },
-  { value: "40%", label: "Yearly growth" },
-  { value: "97%", label: "Customer satisfaction" },
-  { value: "300B", label: "Current Money Managed" },
-];
-
-export default function Impact() {
+export default function ImpactSection() {
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
-        <img src="/assets/impact-image.jpg" alt="Impact" className="rounded-xl shadow-lg w-full h-64 object-cover" />
-        <div>
-          <h2 className="text-3xl font-bold mb-4">Our impact in numbers</h2>
-          <div className="grid grid-cols-2 gap-6 mb-6">
-            {metrics.map((m, i) => (
-              <div key={i}>
-                <div className="text-3xl font-bold text-gray-900">{m.value}</div>
-                <div className="text-gray-600">{m.label}</div>
-              </div>
-            ))}
+    <section className="bg-white py-16 px-6 md:px-12">
+      <div className="max-w-7xl mx-auto space-y-12">
+        {/* Top: Stats Section */}
+        <div className="flex flex-col lg:flex-row items-center gap-40">
+          {/* Image + Heading */}
+          <div className="flex flex-col items-start gap-4">
+            <h2 className="text-5xl md:text-4xl font-bold text-gray-900 ">
+              Our&nbsp; impact in <br /> numbers
+            </h2>
+            <img
+              src="src/assets/images/impact.png"
+              alt="Business meeting"
+              className="w-auto max-h-[450px] rounded-xl object-cover"
+            />
           </div>
-          <a href="#" className="inline-block bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold shadow hover:bg-blue-800 transition">Get Started</a>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 gap-x-16 gap-y-8">
+            <div>
+              <h3 className="text-[5rem] font-bold">100K</h3>
+              <p className="text-lg text-gray-500">Customer</p>
+            </div>
+            <div>
+              <h3 className="text-[5rem] font-bold">97%</h3>
+              <p className="text-lg text-gray-500">Customer satisfaction</p>
+            </div>
+            <div>
+              <h3 className="text-[5rem] font-bold">40%</h3>
+              <p className="text-lg text-gray-500">Yearly growth</p>
+            </div>
+            <div>
+              <h3 className="text-[5rem] font-bold">300B</h3>
+              <p className="text-lg text-gray-500">Current Money Managed</p>
+            </div>
+            <div className="col-span-2 mt-4">
+              <button className="inline-flex items-center px-6 py-3 border border-gray-900 text-gray-900 rounded-full text-sm font-medium hover:bg-gray-900 hover:text-white transition duration-300">
+                Get Started <ArrowRight className="ml-2 w-4 h-4" />
+              </button>
+            </div>
+          </div>
         </div>
+
+        {/* Bottom: Call To Action */}
       </div>
     </section>
   );

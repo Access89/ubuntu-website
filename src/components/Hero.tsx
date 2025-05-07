@@ -1,28 +1,26 @@
-import React from "react";
-
 export default function Hero() {
   return (
-    <section className="pt-24 pb-12 bg-gradient-to-b from-blue-50 to-white">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-6">
-        <div className="flex-1 flex flex-col items-start">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Welcome to Ubuntu Capital</h1>
-          <p className="text-lg text-gray-600 mb-6">Your trusted partner for loans, investments, and financial growth.</p>
-          <div className="flex space-x-4">
-            <div className="bg-white rounded-xl shadow-lg p-6">
-              <div className="text-blue-700 font-bold text-xl">Loan Amount</div>
-              <div className="text-2xl font-bold">₵75,000</div>
-              <div className="text-gray-500 text-sm">9.5% APR</div>
-            </div>
-            <div className="bg-white rounded-xl shadow-lg p-6">
-              <div className="text-blue-700 font-bold text-xl">Loan Calculator</div>
-              <div className="text-gray-500 text-sm">Estimate your loan easily</div>
-            </div>
-          </div>
+    <section className="pt-24 md:pt-5 pb-12 bg-gradient-to-b fromblue-50 towhite">
+      {/* <div className="w-full flex items-center justify-center px-6"> */}
+      {/* <div className="flex-1  flex flex-col items-center justify-center"> */}
+      <div className="relative w-full">
+        {/* hero image and cards */}
+        <div>
+          <img
+            src="src/assets/images/hero-image.png"
+            alt="hero-image"
+            className=" w-full sm:w-[85%] lg:w-[60%] mx-auto h-full border"
+          />
+
         </div>
-        <div className="flex-1 flex justify-center mt-8 md:mt-0">
-          <img src="/assets/hero-mockup.png" alt="App Mockup" className="w-full max-w-md rounded-2xl shadow-2xl" />
-        </div>
+        <img
+          src="src/assets/images/Noise.png"
+          alt="noise"
+          className="w-full h-auto absolute top-0 bottom-0 right-0 left-0 opacity-70"
+        />
       </div>
+      {/* </div> */}
+      {/* </div> */}
     </section>
   );
 }
