@@ -4,7 +4,10 @@ import logo from "@/assets/images/logo.png";
 const quickLinks = [
   { label: "Home", href: "#" },
   { label: "Investment", href: "#" },
-  { label: "Loan", href: "#" },
+  {
+    label: "Loan",
+    href: "https://digital.foundry-platform.com/ubuntu-capital",
+  },
   { label: "About Us", href: "#" },
   { label: "Support", href: "#" },
 ];

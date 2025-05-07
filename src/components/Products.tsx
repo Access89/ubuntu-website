@@ -16,10 +16,12 @@ const services = [
   {
     title: "Salaried Loans",
     icon: loans,
+    href: "https://digital.foundry-platform.com/ubuntu-capital",
   },
   {
     title: "Ubuntu Capital FastSME Loans",
     icon: SME,
+    href: "https://digital.foundry-platform.com/ubuntu-capital",
   },
 ];
 
@@ -48,6 +50,11 @@ export default function Products() {
           {services.map((service, idx) => (
             <div
               key={idx}
+              onClick={() => {
+                if (service.href) {
+                  window.open(service.href, "_blank");
+                }
+              }}
               className="flex flex-col gap-6 bg-[#A9CAF2]/50 rounded-3xl px-6 py-10 items-start hover:shadow-lg transition duration-300 h-[250px] lg:h-[300px] max-w-xs "
             >
               <div className="bg-white p-4 rounded-2xl">
