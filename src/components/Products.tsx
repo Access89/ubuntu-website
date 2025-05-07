@@ -25,33 +25,32 @@ export default function Products() {
     <section className="bg-white py-16 px-6 md:px-12">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-12">
         {/* Left Section */}
-        <div className="lg:w-1/2 space-y-6">
-          <h2 className="text-[4rem] font-bold leading-[110%] text-gray-900">
+        <div className="w-full lg:w-1/2 space-y-6">
+          <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-bold leading-[110%] text-gray-900">
             Browse our set of
             <br /> products and services
           </h2>
-          <p className="text-[#9E9E9E] font-[500] text-xl mb-10">
-            we offer a variety of tools and resources
-            <br />
+          <p className="text-[#9E9E9E] font-medium text-lg md:text-xl mb-6 md:mb-10">
+            We offer a variety of tools and resources
+            <br className="hidden md:block" />
             to help you manage your finances effectively.
           </p>
-          <button className="inline-flex items-center px-6 py-3 bg-[#225EA6] text-[#E1E4EA] text-[1.3rem] rounded-full font-medium hover:bg-[#225EA6]/80 transition">
+          <button className="inline-flex items-center px-6 py-3 bg-[#225EA6] text-white text-lg md:text-xl rounded-full font-medium hover:bg-[#225EA6]/80 transition">
             Learn More <ArrowRight className="ml-2 w-4 h-4" />
           </button>
         </div>
 
         {/* Right Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:w-1/2">
+        <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="flex flex-col gap-8 bg-[#A9CAF2]/50 rounded-3xl h-[300px] px-6 py-12 items-start space-x-4 hover:shadow-lg transition"
+              className="flex flex-col gap-6 bg-[#A9CAF2]/50 rounded-3xl px-6 py-10 items-start hover:shadow-lg transition duration-300 h-[300px] "
             >
               <div className="bg-white p-3 rounded-2xl">
-                {/* {service.icon} */}
                 <Icon icon={service.icon} className="w-8 h-8 text-[#225EA6]" />
               </div>
-              <div className="text-2xl font-[600] text-gray-900">
+              <div className="text-xl md:text-2xl font-semibold text-gray-900">
                 {service.title}
               </div>
             </div>
