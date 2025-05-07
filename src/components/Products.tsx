@@ -28,8 +28,8 @@ export default function Products() {
     <section className="bg-white py-16 px-6 md:px-12 border-y border-[#E5E5E5]">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-12">
         {/* Left Section */}
-        <div className="w-full lg:w-1/2 space-y-6">
-          <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-bold leading-[110%] text-gray-900">
+        <div className="w-full lg:w-1/2 space-y-6 flex flex-col items-start sm:items-center">
+          <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-bold leading-[110%] text-left sm:text-center lg:text-left">
             Browse our set of
             <br /> products and services
           </h2>
