@@ -12,7 +12,7 @@ export default function ImpactSection() {
               Our impact in <br /> numbers
             </h2>
             <img
-              src="src/assets/images/impact.png"
+              src="src/assets/impact.png"
               alt="Business meeting"
               className="w-auto max-h-[450px] rounded-xl object-cover"
             />

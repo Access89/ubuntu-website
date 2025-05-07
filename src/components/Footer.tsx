@@ -21,7 +21,7 @@ export default function Footer() {
         {/* Logo */}
         <div className="col-span-1">
           <img
-            src="src/assets/images/logo.png"
+            src="src/assets/logo.png"
             alt="Logo"
             className="h-12 sm:h-16 mb-4"
           />

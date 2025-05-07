@@ -5,7 +5,7 @@ export default function CallToAction() {
     <section
       className="py-12 px-6 md:px-10 lg:px-12 bg-white max-w-7xl mx-auto flex flex-col md:flex-row flex-wrap items-center justify-between gap-8 rounded-none lg:rounded-3xl"
       style={{
-        backgroundImage: "url('src/assets/images/CTA.png')",
+        backgroundImage: "url('src/assets/CTA.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

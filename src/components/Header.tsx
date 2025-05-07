@@ -17,7 +17,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img
-            src="/src/assets/images/header-logo.png"
+            src="/src/assets/header-logo.png"
             alt="Ubuntu Capital Logo"
             className="h-12 w-auto"
           />
@@ -46,7 +46,7 @@ export default function Header() {
             <SheetContent side="left" className="w-64 p-6  bg-white">
               <div className="mb-4">
                 <img
-                  src="/src/assets/images/logo.png"
+                  src="/src/assets/header-logo.png"
                   alt="Ubuntu Capital Logo"
                   className="h-6"
                 />

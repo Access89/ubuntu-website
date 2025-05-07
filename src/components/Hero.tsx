@@ -25,14 +25,14 @@ export default function Hero() {
       {/* Hero Image */}
       <div className="relative w-full">
         <img
-          src="src/assets/images/hero-image.png"
+          src="src/assets/hero-image.png"
           alt="hero"
           className="w-full sm:w-[85%] lg:w-[60%] mx-auto relative z-10"
         />
 
         {/* Noise Overlay */}
         <img
-          src="src/assets/images/Noise.png"
+          src="src/assets/Noise.png"
           alt="noise"
           className="absolute inset-0 w-full h-auto opacity-70 z-0"
         />
@@ -46,7 +46,7 @@ export default function Hero() {
             >
               <div className="text-blue-600 text-2xl mb-3"></div>
               <img
-                src="src/assets/images/check.png"
+                src="src/assets/check.png"
                 alt="icon"
                 className="w-5 h-5 mb-3"
               />
