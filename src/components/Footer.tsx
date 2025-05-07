@@ -18,14 +18,14 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="bg-black text-white border-t py-8">
-      <div className="max-w-7xl mx-auto py-16 border-b border-white/50 px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto py-16 border-b border-white/50 px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
         {/* Logo */}
         <div className="col-span-1">
           <img src={logo} alt="Logo" className="h-12 sm:h-16 mb-4" />
         </div>
 
         {/* Contact Info */}
-        <div className="flex flex-col gap-4 text-sm col-span-1 sm:col-span-2">
+        <div className="flex flex-col gap-4 text-sm col-span-1 lg:col-span-2">
           <div>
             <p>info@ubuntucapitalgh.com</p>
             <p>www.ubuntucapitalgh.com</p>

@@ -35,7 +35,7 @@ const faqs = [
 const Faq = () => {
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row gap-12 md:gap-16">
+      <div className="max-w-7xl lg:mx-auto px-6 flex flex-col md:flex-row gap-12 md:gap-16 md:mx-16">
         {/* Intro Section */}
         <div className="md:w-1/2">
           <p className="text-[#235EA6] font-light text-xl mb-2">Support</p>

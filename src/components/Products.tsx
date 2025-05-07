@@ -28,7 +28,7 @@ export default function Products() {
     <section className="bg-white py-16 px-6 md:px-12 border-y border-[#E5E5E5]">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-12">
         {/* Left Section */}
-        <div className="w-full lg:w-1/2 space-y-6 flex flex-col items-start sm:items-center">
+        <div className="w-full lg:w-1/2 space-y-6 flex flex-col items-start sm:items-center lg:items-start text-left">
           <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-bold leading-[110%] text-left sm:text-center lg:text-left">
             Browse our set of
             <br /> products and services
@@ -44,11 +44,11 @@ export default function Products() {
         </div>
 
         {/* Right Section */}
-        <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="w-fit mx-auto lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center">
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="flex flex-col gap-6 bg-[#A9CAF2]/50 rounded-3xl px-6 py-10 items-start hover:shadow-lg transition duration-300 h-[250px] lg:h-[300px] "
+              className="flex flex-col gap-6 bg-[#A9CAF2]/50 rounded-3xl px-6 py-10 items-start hover:shadow-lg transition duration-300 h-[250px] lg:h-[300px] max-w-xs "
             >
               <div className="bg-white p-4 rounded-2xl">
                 {/* <Icon icon={service.icon} className="w-8 h-8 text-[#225EA6]" /> */}

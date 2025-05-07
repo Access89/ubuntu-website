@@ -5,11 +5,11 @@ import { ArrowRight } from "lucide-react";
 export default function ImpactSection() {
   return (
     <section className="bg-white py-16 px-6 md:px-12 xl:px-0">
-      <div className="max-w-7xl mx-auto space-y-6">
+      <div className="max-w-7xl lg:mx-auto space-y-6 md:mx-16">
         {/* Top: Stats Section */}
         {/* Image + Heading */}
-        <div className="flex flex-col items-start gap-6 w-full lg:w-auto">
-          <h2 className="text-3xl sm:text-5xl lg:text-[2.5rem] font-bold text-gray-900">
+        <div className="flex flex-col items-start sm:items-center lg:items-start gap-6 w-full lg:w-auto">
+          <h2 className="text-3xl sm:text-[2rem] lg:text-[2.5rem] font-bold text-gray-900 text-center lg:text-left leading-[110%]">
             Our impact in <br /> numbers
           </h2>
         </div>
@@ -17,7 +17,7 @@ export default function ImpactSection() {
           <img
             src={impact}
             alt="Business meeting"
-            className="w-auto max-h-[450px] rounded-xl object-cover"
+            className="w-full lg:w-auto max-h-[450px] rounded-xl object-cover"
           />
 
           {/* Stats */}
