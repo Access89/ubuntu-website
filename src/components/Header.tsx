@@ -6,7 +6,7 @@ import { Menu } from "lucide-react";
 import logo from "@/assets/images/logo.png";
 
 const navLinks = [
-  { label: "Home", href: "#" },
+  { label: "Home", href: "/" },
   { label: "Investments", href: "#" },
   {
     label: "Loans",
