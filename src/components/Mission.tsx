@@ -18,7 +18,7 @@ export default function Mission() {
 
       {/* Right - Content */}
       <div className="lg:w-1/2 max-w-xl">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug mb-6">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-snug mb-6">
           Discover the mission &<br /> story behind our company
         </h2>
         <p className="text-[#010101]/70 leading-relaxed text-base md:text-lg mb-6">
