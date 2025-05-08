@@ -1,28 +1,15 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Products from "./components/Products";
-import Impact from "./components/Impact";
-import CallToAction from "./components/CallToAction";
-import Mission from "./components/Mission";
-import FAQ from "./components/FAQ";
-import Footer from "./components/Footer";
+import Landing from "./pages/Landing";
+import Loans from "./pages/Loans";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="bg-white min-h-screen">
-      <Header />
-      <main>
-        <Hero />
-        <Products />
-        <div className="max-w-7xl mx-auto">
-          <Impact />
-          <CallToAction />
-          <Mission />
-          <FAQ />
-        </div>
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/fleet" element={<Loans />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,6 +1,7 @@
 import heroImage from "../assets/images/hero-image.png";
 import checkIcon from "../assets/images/check.png";
 import noise from "../assets/images/Noise.png";
+import Header from "./Header";
 
 export default function Hero() {
   const cards = [
@@ -25,13 +26,15 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative min-h-[700px] lg:min-h-screen pt-24 md:pt-0 pb-32 md:pb-5">
+    <section className="relative min-h-[700px] lg:min-h-screen pt24 md:pt-0 pb-32 md:pb-5">
       {/* Hero Image */}
       <div className="relative w-full">
+        <Header />
+
         <img
           src={heroImage}
           alt="hero"
-          className="w-full sm:w-[85%] lg:w-[60%] mx-auto relative z-10"
+          className="w-full sm:w-[85%] lg:w-[60%] mx-auto pt-24 relative z-10"
         />
 
         {/* Noise Overlay */}
@@ -50,10 +53,10 @@ export default function Hero() {
             >
               <div className="text-blue-600 text-2xl mb-3"></div>
               <img src={checkIcon} alt="icon" className="w-5 h-5 mb-3" />
-              <h3 className="text-[15px] text-[#1A1A1A] font-semibold mb-2">
+              <h3 className="text-lg text-[15px] text-[#1A1A1A] font-semibold mb-2">
                 {card.title}
               </h3>
-              <p className="text-[#575757] leading-[150%] text-xs">
+              <p className="text-[#575757] leading-[150%] text-base lg:text-xs">
                 {card.description}
               </p>
             </div>
