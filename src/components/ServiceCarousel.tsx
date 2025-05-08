@@ -37,6 +37,7 @@ const services = [
 export default function ServiceCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
+    dragFree: true,
     align: "start",
   });
 
@@ -46,12 +47,12 @@ export default function ServiceCarousel() {
   return (
     <div className="relative maxw-7xl mx-auto">
       {/* Carousel viewport */}
-      <div className="overflow-hidden px-32 w-full" ref={emblaRef}>
+      <div className="overflow-hidden sm:px-12 lg:px-32 w-full" ref={emblaRef}>
         <div className="flex gap-4">
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="min-w-[280px] sm:min-w-[400px] max-w-[300px] shrink-0"
+              className="min-w-[280px] min-h-[300px] sm:min-w-[400px] max-w-[300px] shrink-0"
               onClick={() =>
                 service.href && window.open(service.href, "_blank")
               }
@@ -61,7 +62,7 @@ export default function ServiceCarousel() {
                 <div className="text-2xl font-semibold text-gray-900">
                   {service.title}
                 </div>
-                <p className="text-gray-600 text-base line-clamp-2">
+                <p className="text-gray-600 text-lg line-clamp-2">
                   {service.text}
                 </p>
                 <div className="absolute bottom-5 right-10 flex items-center justify-end bg-[#272729] rounded-full p-2  text-white mt-2">
@@ -78,18 +79,22 @@ export default function ServiceCarousel() {
       </div>
 
       {/* Navigation buttons */}
-      <div className="justify-end pr-20 mt-16 gap-4 -translate-y-1/2 w-full flex px-4 z-10">
+      <div className="justify-end sm:pr-12 lg:pr-20 mt-16 gap-4 -translate-y-1/2 w-full flex px-4 z-10">
         <button
+          type="button"
+          title="Scroll to previous"
           onClick={scrollPrev}
           className="bg-[#e8e8ed] shadow rounded-full p-2 hover:bg-[#e6e6e9]/70 transition duration-300"
         >
-          <ChevronRight className="rotate-180 w-5 h-5 text-gray-800" />
+          <ChevronRight className="rotate-180 w-6 h-6 text-gray-800" />
         </button>
         <button
+          type="button"
+          title="Scroll to Next"
           onClick={scrollNext}
           className="bg-[#e8e8ed] shadow rounded-full p-2 hover:bg-gray-100 transition duration-300"
         >
-          <ChevronRight className="w-5 h-5 text-gray-800" />
+          <ChevronRight className="w-6 h-6 text-gray-800" />
         </button>
       </div>
     </div>
