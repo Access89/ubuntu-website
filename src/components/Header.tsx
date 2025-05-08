@@ -10,7 +10,7 @@ const navLinks = [
   { label: "Investments", href: "#" },
   {
     label: "Loans",
-    href: "https://digital.foundry-platform.com/ubuntu-capital",
+    href: "/loans",
   },
   { label: "About Us", href: "#" },
   { label: "Our Team", href: "#" },
