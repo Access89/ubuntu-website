@@ -1,3 +1,4 @@
+import Faq from "@/components/FAQ";
 import LoanOffers from "@/components/loans/LoanOffers";
 import LoansHero from "@/components/loans/loansHero";
 
@@ -6,6 +7,7 @@ function Loans() {
     <div>
       <LoansHero />
       <LoanOffers />
+      <Faq />
     </div>
   );
 }
