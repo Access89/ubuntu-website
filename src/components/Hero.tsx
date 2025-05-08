@@ -25,7 +25,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative pt-24 md:pt-0 pb-32 md:pb-5">
+    <section className="relative min-h-[700px] lg:min-h-screen pt-24 md:pt-0 pb-32 md:pb-5">
       {/* Hero Image */}
       <div className="relative w-full">
         <img
@@ -38,7 +38,7 @@ export default function Hero() {
         <img
           src={noise}
           alt="noise"
-          className="absolute inset-0 w-full h-auto opacity-70 z-0"
+          className="absolute inset-0 w-full h-auto lg:h-screen opacity-70 z-0"
         />
 
         {/* Cards */}
