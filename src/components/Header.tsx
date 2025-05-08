@@ -16,7 +16,7 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <header className="w-full">
+    <header className="w-full sticky top-0 z-50 bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
