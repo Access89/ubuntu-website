@@ -45,14 +45,14 @@ export default function ServiceCarousel() {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <div className="relative maxw-7xl mx-auto">
+    <div className="relative mx-auto">
       {/* Carousel viewport */}
       <div className="overflow-hidden sm:px-12 lg:px-32 w-full" ref={emblaRef}>
-        <div className="flex gap-4">
+        <div className="flex gap-4 touch-pan-y cursor-grab active:cursor-grabbing">
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="min-w-[280px] min-h-[300px] sm:min-w-[400px] max-w-[300px] shrink-0"
+              className="embla__slide min-w-[280px] min-h-[300px] sm:min-w-[400px] max-w-[300px] shrink-0"
               onClick={() =>
                 service.href && window.open(service.href, "_blank")
               }
@@ -65,10 +65,9 @@ export default function ServiceCarousel() {
                 <p className="text-gray-600 text-lg line-clamp-2">
                   {service.text}
                 </p>
-                <div className="absolute bottom-5 right-10 flex items-center justify-end bg-[#272729] rounded-full p-2  text-white mt-2">
-                  {/* <ChevronRight className="w-5 h-5" /> */}
+                <div className="absolute bottom-5 right-10 flex items-center justify-end bg-[#272729] rounded-full p-2 text-white mt-2">
                   <Icon
-                    icon={"weui:arrow-filled"}
+                    icon="weui:arrow-filled"
                     className="w-6 h-6 font-bold"
                   />
                 </div>

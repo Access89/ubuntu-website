@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import logo from "@/assets/images/logo.png";
@@ -15,9 +18,24 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const [showBorder, setShowBorder] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBorder(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="w-full sticky top-0 z-50 bg-white border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <header
+      className={`w-full sticky top-0 z-50 bg-white transition-shadow duration-200 ${
+        showBorder ? "border-b border-gray-200" : ""
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 lg:px-0 py-2 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img src={logo} alt="Ubuntu Capital Logo" className="h-12 w-auto" />
@@ -43,7 +61,7 @@ export default function Header() {
             <SheetTrigger>
               <Menu className="h-6 w-6 text-gray-700" />
             </SheetTrigger>
-            <SheetContent side="left" className="w-1/2 min-w-64 p-6  bg-white">
+            <SheetContent side="left" className="w-1/2 min-w-64 p-6 bg-white">
               <div className="mb-4">
                 <img src={logo} alt="Ubuntu Capital Logo" className="h-12" />
               </div>
