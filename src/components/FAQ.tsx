@@ -40,7 +40,7 @@ const Faq = () => {
         <div className="md:w-1/2">
           <p className="text-[#235EA6] font-light text-xl mb-2">Support</p>
           <h2 className="text-3xl sm:text-4xl font-semibold mb-4">FAQs</h2>
-          <p className="text-[#ACACAC] max-w-md">
+          <p className="text-[#ACACAC] max-w-md text-lg lg:text-xl leading-[150%] font-[300]">
             Everything you need to know about our products and services. Can’t
             find the answer you’re looking for? Please contact us.
           </p>
@@ -55,10 +55,10 @@ const Faq = () => {
                 value={`item-${index + 1}`}
                 className="border-0"
               >
-                <AccordionTrigger className="text-lg sm:text-xl">
+                <AccordionTrigger className="text-lg lg:text-2xl sm:text-xl">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-[#434244]/70 text-sm sm:text-base">
+                <AccordionContent className="text-[#434244]/70 text-sm sm:text-base lg:text-lg leading-[150%] font-[300]">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

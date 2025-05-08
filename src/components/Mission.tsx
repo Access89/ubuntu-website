@@ -21,7 +21,7 @@ export default function Mission() {
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-snug mb-6">
           Discover the mission &<br /> story behind our company
         </h2>
-        <p className="text-[#010101]/70 leading-relaxed text-base md:text-lg mb-6">
+        <p className="text-[#010101]/70 text-xl lg:text-2xl leading-[150%] font-[300] mb-6">
           Ubuntu Capital Microfinance is a deposit-taking tier 2 micro finance
           company incorporated to provide financial services through an
           efficient and well-motivated workforce, state-of-the-art technology,
@@ -30,7 +30,7 @@ export default function Mission() {
         </p>
         <a
           href="#"
-          className="text-[#225EA6] text-base md:text-lg font-semibold hover:underline inline-flex items-center"
+          className="text-[#225EA6] text-xl lg:text-2xl leading-[150%] font-[300] hover:underline inline-flex items-center"
         >
           About us <span className="ml-1">→</span>
         </a>
