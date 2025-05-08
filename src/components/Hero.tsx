@@ -34,7 +34,7 @@ export default function Hero() {
         <img
           src={heroImage}
           alt="hero"
-          className="w-full sm:w-[85%] lg:w-[60%] mx-auto pt-24 relative z-10"
+          className="w-full sm:w-[85%] lg:w-[60%] h-full mx-auto pt-24 relative z-10"
         />
 
         {/* Noise Overlay */}
