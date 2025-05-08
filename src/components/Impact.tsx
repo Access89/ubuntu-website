@@ -24,13 +24,13 @@ export default function ImpactSection() {
               <h3 className="text-5xl sm:text-5xl md:text-[5rem] text-[#225EA6] font-[500]">
                 100K
               </h3>
-              <p className=" lg:text-lg text-gray-500">Customer</p>
+              <p className="text-base lg:text-lg text-[#929292]">Customer</p>
             </div>
             <div>
               <h3 className="text-5xl sm:text-6xl md:text-[5rem] text-[#225EA6] font-[500]">
                 97%
               </h3>
-              <p className="text-sm md:text-base lg:text-lg text-[#929292]">
+              <p className="text-base lg:text-lg text-[#929292]">
                 Customer satisfaction
               </p>
             </div>
@@ -38,7 +38,7 @@ export default function ImpactSection() {
               <h3 className="text-5xl sm:text-6xl md:text-[5rem] text-[#225EA6] font-[500]">
                 40%
               </h3>
-              <p className="text-sm md:text-base lg:text-lg text-[#929292]">
+              <p className="text-base lg:text-lg text-[#929292]">
                 Yearly growth
               </p>
             </div>
@@ -46,7 +46,7 @@ export default function ImpactSection() {
               <h3 className="text-5xl sm:text-6xl md:text-[5rem] text-[#225EA6] font-[500]">
                 300B
               </h3>
-              <p className="text-sm md:text-base lg:text-lg text-[#929292]">
+              <p className="text-base lg:text-lg text-[#929292]">
                 Current Money Managed
               </p>
             </div>

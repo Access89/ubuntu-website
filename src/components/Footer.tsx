@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
 
         {/* Contact Info */}
-        <div className="flex flex-col gap-4 text-sm col-span-1 lg:col-span-2">
+        <div className="flex flex-col gap-4 text-[15px] col-span-1 lg:col-span-2  sm:text-base lg:text-lg leading-[150%] font-[300]">
           <div>
             <p>info@ubuntucapitalgh.com</p>
             <p>www.ubuntucapitalgh.com</p>
@@ -42,13 +42,15 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h4 className="font-semibold text-white mb-2">Quick Links</h4>
+          <h4 className="text-white mb-2 text-lg lg:text-xl leading-[150%] font-[600]">
+            Quick Links
+          </h4>
           <ul className="space-y-1 text-[#F5F5F5] text-sm">
             {quickLinks.map(({ label, href }) => (
               <li key={label}>
                 <a
                   href={href}
-                  className="hover:text-blue-500 transition-colors duration-200"
+                  className="hover:text-blue-500 transition-colors duration-200 text-base sm:text-lg lg:text-xl leading-[150%] font-[300]"
                 >
                   {label}
                 </a>
@@ -59,7 +61,9 @@ export default function Footer() {
 
         {/* Social Icons */}
         <div>
-          <h4 className="font-semibold text-white mb-2">Follow Us</h4>
+          <h4 className="text-white mb-2  text-lg lg:text-xl leading-[150%] font-[600]">
+            Follow Us
+          </h4>
           <div className="flex space-x-4">
             {socialLinks.map(({ icon, href }, idx) => (
               <a
