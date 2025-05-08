@@ -1,13 +1,13 @@
 "use client";
 
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronRight } from "lucide-react";
 import wallet from "../assets/images/wallet-line.png";
 import futurePlan from "../assets/images/future-plan.png";
 import loans from "../assets/images/loans.png";
 import SME from "../assets/images/SME.png";
-import { Icon } from "@iconify/react/dist/iconify.js";
+import { Icon } from "@iconify/react";
 import { useLocation } from "react-router-dom";
 
 const services = [
@@ -48,12 +48,32 @@ export default function ServiceCarousel() {
     align: "start",
   });
 
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
+  useEffect(() => {
+    if (!emblaApi) {
+      return undefined;
+    }
+
+    const onSelect = () => {
+      setCanScrollPrev(emblaApi.canScrollPrev());
+      setCanScrollNext(emblaApi.canScrollNext());
+    };
+
+    emblaApi.on("select", onSelect);
+    onSelect();
+
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi]);
+
   const location = useLocation();
   const isLoans = location.pathname === "/loans";
-
   const visibleServices = isLoans ? services.slice(2, 5) : services;
 
   return (
@@ -80,7 +100,7 @@ export default function ServiceCarousel() {
                 <p className="text-gray-600 text-lg line-clamp-2">
                   {service.text}
                 </p>
-                <div className="absolute bottom-5 sm:right-10 right-5  flex items-center justify-end bg-[#272729] rounded-full p-2 text-white mt-2">
+                <div className="absolute bottom-5 sm:right-10 right-5 flex items-center justify-end bg-[#272729] rounded-full p-2 text-white mt-2">
                   <Icon
                     icon="weui:arrow-filled"
                     className="w-6 h-6 font-bold"
@@ -98,7 +118,12 @@ export default function ServiceCarousel() {
           type="button"
           title="Scroll to previous"
           onClick={scrollPrev}
-          className="bg-white shadow rounded-full p-2 hover:bg-gray-100 transition duration-300"
+          disabled={!canScrollPrev}
+          className={`bg-white shadow rounded-full p-2 transition duration-300 ${
+            canScrollPrev
+              ? "hover:bg-gray-100"
+              : "opacity-40 cursor-not-allowed"
+          }`}
         >
           <ChevronRight className="rotate-180 w-6 h-6 text-gray-800" />
         </button>
@@ -106,7 +131,12 @@ export default function ServiceCarousel() {
           type="button"
           title="Scroll to Next"
           onClick={scrollNext}
-          className="bg-white shadow rounded-full p-2 hover:bg-gray-100 transition duration-300"
+          disabled={!canScrollNext}
+          className={`bg-white shadow rounded-full p-2 transition duration-300 ${
+            canScrollNext
+              ? "hover:bg-gray-100"
+              : "opacity-50 cursor-not-allowed"
+          }`}
         >
           <ChevronRight className="w-6 h-6 text-gray-800" />
         </button>
