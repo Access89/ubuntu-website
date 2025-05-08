@@ -8,6 +8,7 @@ import futurePlan from "../assets/images/future-plan.png";
 import loans from "../assets/images/loans.png";
 import SME from "../assets/images/SME.png";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { useLocation } from "react-router-dom";
 
 const services = [
   {
@@ -32,6 +33,12 @@ const services = [
     href: "https://digital.foundry-platform.com/ubuntu-capital",
     text: "This loan product is designed for micro and small businesses with predictable cash flow. It has a 50-working-day tenure, a 72-hour turnaround time, and requires daily repayment via USSD. Start-up businesses are not eligible.",
   },
+  {
+    title: "Ubuntu Capital Business loans",
+    icon: SME,
+    href: "https://digital.foundry-platform.com/ubuntu-capital",
+    text: "This loan product is designed for micro and small businesses with predictable cash flow. It has a 50-working-day tenure, a 72-hour turnaround time, and requires daily repayment via USSD. Start-up businesses are not eligible.",
+  },
 ];
 
 export default function ServiceCarousel() {
@@ -44,12 +51,17 @@ export default function ServiceCarousel() {
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
+  const location = useLocation();
+  const isLoans = location.pathname === "/loans";
+
+  const visibleServices = isLoans ? services.slice(2, 5) : services;
+
   return (
     <div className="relative mx-auto">
       {/* Carousel viewport */}
       <div className="overflow-hidden sm:px-12 lg:px-28 w-full" ref={emblaRef}>
         <div className="flex gap-4 touch-pan-y cursor-grab active:cursor-grabbing">
-          {services.map((service, idx) => (
+          {visibleServices.map((service, idx) => (
             <div
               key={idx}
               className="embla__slide min-w-[280px] min-h-[300px] sm:min-w-[400px] max-w-[300px] shrink-0"
@@ -83,7 +95,7 @@ export default function ServiceCarousel() {
           type="button"
           title="Scroll to previous"
           onClick={scrollPrev}
-          className="bg-[#e8e8ed] shadow rounded-full p-2 hover:bg-[#e6e6e9]/70 transition duration-300"
+          className="bg-white shadow rounded-full p-2 hover:bg-gray-100 transition duration-300"
         >
           <ChevronRight className="rotate-180 w-6 h-6 text-gray-800" />
         </button>
@@ -91,7 +103,7 @@ export default function ServiceCarousel() {
           type="button"
           title="Scroll to Next"
           onClick={scrollNext}
-          className="bg-[#e8e8ed] shadow rounded-full p-2 hover:bg-gray-100 transition duration-300"
+          className="bg-white shadow rounded-full p-2 hover:bg-gray-100 transition duration-300"
         >
           <ChevronRight className="w-6 h-6 text-gray-800" />
         </button>
