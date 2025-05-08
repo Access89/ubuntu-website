@@ -16,7 +16,7 @@ export default function CallToAction() {
 
       {/* Text and Button */}
       <div className="w-full lg:w-1/2 text-left z-30 flex flex-col items-center lg:items-start  justify-center ">
-        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white lg:text-[#010101] max-w-[500px] text-center pb-4 lg:pb-8">
+        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white lg:text-[#010101] max-w-[500px] text-center lg:text-left pb-4 lg:pb-8">
           Open an investment account today and experience next-gen services
         </h3>
         <button className="inline-flex items-center px-6 py-3 bg-[#225EA6] border hover:text-[#225EA6] border-[#225EA6] text-white rounded-full text-sm font-medium hover:bg-white transition duration-300">
