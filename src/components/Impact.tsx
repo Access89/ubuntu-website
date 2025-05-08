@@ -26,7 +26,14 @@ export default function ImpactSection() {
           </h2>
           <p className="text-xl lg:text-2xl leading-[150%] font-[300]">
             Ubuntu Capital Microfinance is driving financial inclusion across
-            Ghana by empowering over 45,000 clients...
+            Ghana by empowering over 45,000 clients in 8 regions with access to
+            ethical and reliable financial services. With over GHS 120 million
+            disbursed in microloans—primarily to women, youth, and small
+            businesses—we’re fueling local enterprise and community resilience.
+            Our digital platforms have enabled 250,000+ mobile transactions,
+            while our financial literacy programs are helping thousands build
+            lasting financial habits. Every number tells a story of progress,
+            purpose, and people.
           </p>
 
           {/* Stats with animated counters */}
