@@ -9,7 +9,7 @@ export default function ImpactSection() {
         {/* Top: Stats Section */}
         {/* Image + Heading */}
         <div className="flex flex-col items-start sm:items-center lg:items-start gap-6 w-full lg:w-auto">
-          <h2 className="text-3xl sm:text-[2rem] lg:text-[2.5rem] font-bold text-gray-900 text-center lg:text-left leading-[110%]">
+          <h2 className="text-3xl sm:text-[2rem] lg:text-[2.5rem] font-[600] text-gray-900 text-center lg:text-left leading-[110%]">
             Our impact in <br /> numbers
           </h2>
         </div>
