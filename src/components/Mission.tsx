@@ -4,13 +4,13 @@ export default function Mission() {
       {/* Left - Logo / Brand */}
       <div className="hidden lg:block text-[#754C2A] text-left lg:w-1/2">
         <div className="border-l-4 md:border-l-8 border-[#754C2A] pl-4 md:pl-6 montserrat py-5">
-          <h1 className="text-5xl md:text-6xl lg:text-9xl font-light leading-[101%]">
+          <h1 className="text-5xl md:text-6xl lg:text-[110px] font-light leading-[101%]">
             The
           </h1>
-          <h1 className="text-5xl md:text-6xl lg:text-9xl font-light leading-[101%]">
+          <h1 className="text-5xl md:text-6xl lg:text-[110px] font-light leading-[101%]">
             Money
           </h1>
-          <h1 className="text-5xl md:text-6xl lg:text-9xl font-light leading-[101%]">
+          <h1 className="text-5xl md:text-6xl lg:text-[110px] font-light leading-[101%]">
             Center
           </h1>
         </div>
