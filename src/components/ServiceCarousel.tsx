@@ -72,7 +72,7 @@ export default function ServiceCarousel() {
                 service.href && window.open(service.href, "_blank")
               }
             >
-              <div className="relative h-full flex flex-col gap-4 bg-white rounded-4xl p-6 md:p-12 md:pb-20 items-start transition duration-300 cursor-pointer">
+              <div className="relative h-full flex flex-col gap-4 bg-white rounded-4xl p-8 pt-12 md:p-12 md:pb-20 items-start transition duration-300 cursor-pointer">
                 <img src={service.icon} alt="icon" className="w-6 h-6" />
                 <div className="text-2xl font-semibold text-gray-900">
                   {service.title}
@@ -80,7 +80,7 @@ export default function ServiceCarousel() {
                 <p className="text-gray-600 text-lg line-clamp-2">
                   {service.text}
                 </p>
-                <div className="absolute bottom-5 right-10 flex items-center justify-end bg-[#272729] rounded-full p-2 text-white mt-2">
+                <div className="absolute bottom-5 sm:right-10 right-5  flex items-center justify-end bg-[#272729] rounded-full p-2 text-white mt-2">
                   <Icon
                     icon="weui:arrow-filled"
                     className="w-6 h-6 font-bold"
