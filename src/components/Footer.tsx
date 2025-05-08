@@ -21,7 +21,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="bg-black text-white border-t py-8">
-      <div className="max-w-7xl mx-auto py-16 border-b border-white/50 px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto py-16 lg:py-24 border-b border-white/50 px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
         {/* Logo */}
         <div className="col-span-1">
           <img src={logo} alt="Logo" className="h-12 sm:h-16 mb-4" />
@@ -50,7 +50,7 @@ export default function Footer() {
               <li key={label}>
                 <a
                   href={href}
-                  className="hover:text-blue-500 transition-colors duration-200 text-base sm:text-lg lg:text-xl leading-[150%] font-[300]"
+                  className="hover:text-blue-500 transition-colors duration-200 text-base sm:text-lg leading-[150%] font-[300]"
                 >
                   {label}
                 </a>
@@ -78,7 +78,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="text-center font-light text-xs text-[#E4E5E7]/60 mt-6 px-4">
+      <div className="text-center font-light text-sm text-[#E4E5E7]/60 mt-6 px-4">
         &copy; {new Date().getFullYear()} Ubuntu Capital Microfinance. All
         rights reserved.
       </div>

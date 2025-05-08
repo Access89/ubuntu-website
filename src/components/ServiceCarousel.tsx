@@ -59,7 +59,10 @@ export default function ServiceCarousel() {
   return (
     <div className="relative mx-auto">
       {/* Carousel viewport */}
-      <div className="overflow-hidden sm:px-12 lg:px-28 w-full" ref={emblaRef}>
+      <div
+        className="overflow-hidden px-6 sm:px-12 lg:px-28 w-full"
+        ref={emblaRef}
+      >
         <div className="flex gap-4 touch-pan-y cursor-grab active:cursor-grabbing">
           {visibleServices.map((service, idx) => (
             <div
