@@ -8,7 +8,7 @@ const quickLinks = [
     label: "Loan",
     href: "/loans",
   },
-  { label: "About Us", href: "#" },
+  { label: "About Us", href: "/about" },
   { label: "Support", href: "#" },
 ];
 

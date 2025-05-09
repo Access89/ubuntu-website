@@ -12,8 +12,8 @@ const navLinks = [
     label: "Loans",
     href: "/loans",
   },
-  { label: "About Us", href: "#" },
-  { label: "Our Team", href: "#" },
+  { label: "About Us", href: "/about" },
+  // { label: "Our Team", href: "#" },
   { label: "Support", href: "#" },
 ];
 
