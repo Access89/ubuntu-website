@@ -5,6 +5,7 @@ import Investments from "./pages/Investments";
 import Landing from "./pages/Landing";
 import Loans from "./pages/Loans";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SupportPage from "./pages/Support";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ const AppContent = () => {
         <Route path="/loans" element={<Loans />} />
         <Route path="/investments" element={<Investments />} />
         <Route path="/about" element={<About />} />
+        <Route path="/support" element={<SupportPage />} />
       </Routes>
       <Footer />
     </div>

@@ -9,7 +9,7 @@ const quickLinks = [
     href: "/loans",
   },
   { label: "About Us", href: "/about" },
-  { label: "Support", href: "#" },
+  { label: "Support", href: "/support" },
 ];
 
 const socialLinks = [

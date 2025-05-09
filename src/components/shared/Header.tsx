@@ -13,8 +13,7 @@ const navLinks = [
     href: "/loans",
   },
   { label: "About Us", href: "/about" },
-  // { label: "Our Team", href: "#" },
-  { label: "Support", href: "#" },
+  { label: "Support", href: "/support" },
 ];
 
 export default function Header() {
@@ -42,7 +41,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8 text-sm font-normal text-gray-700">
+        <nav className="hidden md:flex space-x-8 text-base font-normal text-gray-700">
           {navLinks.map((link) => (
             <a
               key={link.label}
