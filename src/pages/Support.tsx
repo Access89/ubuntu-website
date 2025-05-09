@@ -1,5 +1,6 @@
 import CallToAction from "@/components/landing/CallToAction";
 import Faq from "@/components/shared/FAQ";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function SupportPage() {
   return (
@@ -25,15 +26,7 @@ export default function SupportPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-center text-xl">
                 <div className="bg-white p-8 border-r">
                   <div className="text-[#225EA6] mb-4">
-                    <svg
-                      className="mx-auto w-10 h-10"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M9 20l-5.447-2.724A2 2 0 013 15.382V5a2 2 0 012-2h14a2 2 0 012 2v10.382a2 2 0 01-1.553 1.894L15 20l-3-1.5-3 1.5z" />
-                    </svg>
+                    <Icon icon={"gis:map-poi"} className="mx-auto w-15 h-15" />
                   </div>
                   <p className="text-lg font-medium">Head Office</p>
                   <p className="text-gray-700">
@@ -43,15 +36,10 @@ export default function SupportPage() {
 
                 <div className="bg-white p-8 border-r">
                   <div className="text-[#225EA6] mb-4">
-                    <svg
-                      className="mx-auto w-10 h-10"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M22 16.92V21a1 1 0 01-1.09 1A19.84 19.84 0 013 5.09 1 1 0 014 4h4.09a1 1 0 011 .75L10.21 7.6a1 1 0 01-.29 1L8.41 10a16 16 0 006.59 6.59l1.39-1.39a1 1 0 011-.29l2.85.71a1 1 0 01.75 1V16.92z" />
-                    </svg>
+                    <Icon
+                      icon={"mdi-light:phone"}
+                      className="mx-auto w-15 h-15"
+                    />
                   </div>
                   <p className="text-lg font-medium">Call Us</p>
                   <p className="text-gray-700">+233 302 421429</p>
@@ -60,15 +48,10 @@ export default function SupportPage() {
 
                 <div className="bg-white p-8">
                   <div className="text-[#225EA6] mb-4">
-                    <svg
-                      className="mx-auto w-10 h-10"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M12 8v5l4 2m6-5a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                    <Icon
+                      icon={"guidance:clock"}
+                      className="mx-auto w-15 h-15"
+                    />
                   </div>
                   <p className="text-lg font-medium">Working Hours</p>
                   <p className="text-gray-700">Mon–Fri: 9 AM – 6 PM</p>
