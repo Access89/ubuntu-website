@@ -1,6 +1,6 @@
 export default function Mission() {
   return (
-    <section className="lg:min-h-[90vh] w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-6 md:px-10 lg:px-3 py-12 bg-white">
+    <section className="pt-24 w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-6 md:px-10 lg:px-3 py-12 bg-white">
       {/* Left - Logo / Brand */}
       <div className="hidden lg:block text-[#754C2A] text-left lg:w-1/2">
         <div className="border-l-4 md:border-l-8 border-[#754C2A] pl-4 md:pl-6 montserrat py-5">
