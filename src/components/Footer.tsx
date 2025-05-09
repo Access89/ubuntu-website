@@ -2,11 +2,11 @@ import { Icon } from "@iconify/react";
 import logo from "@/assets/images/logo.png";
 
 const quickLinks = [
-  { label: "Home", href: "#" },
+  { label: "Home", href: "/" },
   { label: "Investment", href: "#" },
   {
     label: "Loan",
-    href: "https://digital.foundry-platform.com/ubuntu-capital",
+    href: "/loans",
   },
   { label: "About Us", href: "#" },
   { label: "Support", href: "#" },
