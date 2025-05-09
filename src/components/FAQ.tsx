@@ -4,8 +4,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useLocation } from "react-router-dom";
 
-const faqs = [
+const defaultFaqs = [
   {
     question: "How can I open an Investment Account?",
     answer:
@@ -32,7 +33,51 @@ const faqs = [
   },
 ];
 
+const loanFaqs = [
+  {
+    question: "How do I apply for a loan?",
+    answer:
+      "You can apply for a loan by visiting our website or office and completing the application process.",
+  },
+  {
+    question: "What documents are needed for a loan application?",
+    answer:
+      "Typically, you need proof of income, a valid ID, employment verification, and sometimes a guarantor form.",
+  },
+  {
+    question: "How long does loan approval take?",
+    answer:
+      "Loan approval typically takes 24–72 hours after submitting all required documents.",
+  },
+  {
+    question: "What is the maximum loan amount I can apply for?",
+    answer:
+      "The maximum loan amount depends on your income level, creditworthiness, and the loan product you choose.",
+  },
+  {
+    question: "Can I repay my loan early?",
+    answer:
+      "Yes, early repayment is allowed. In fact, it may reduce your overall interest payments. Please review your loan terms for any prepayment fees.",
+  },
+
+  {
+    question: "Is collateral required for all loan types?",
+    answer:
+      "Not all loans require collateral. Unsecured loans are available, but secured loans may offer better interest rates.",
+  },
+
+  {
+    question: "What are the interest rates on your loans?",
+    answer:
+      "Interest rates vary based on the loan product, term, and applicant’s financial profile. Contact us or check our website for current rates.",
+  },
+];
+
 const Faq = () => {
+  const location = useLocation();
+  const isLoans = location.pathname === "/loans";
+  const faqsToShow = isLoans ? loanFaqs : defaultFaqs;
+
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl lg:mx-auto px-6 flex flex-col md:flex-row gap-12 md:gap-16 md:mx-16">
@@ -49,7 +94,7 @@ const Faq = () => {
         {/* FAQ Accordion */}
         <div className="md:w-1/2">
           <Accordion type="single" collapsible className="w-full space-y-2">
-            {faqs.map((faq, index) => (
+            {faqsToShow.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index + 1}`}
