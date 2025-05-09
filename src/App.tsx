@@ -6,6 +6,7 @@ import Landing from "./pages/Landing";
 import Loans from "./pages/Loans";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SupportPage from "./pages/Support";
+import BackToTopButton from "./components/shared/BackToTopButton";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ const AppContent = () => {
         <Route path="/support" element={<SupportPage />} />
       </Routes>
       <Footer />
+      <BackToTopButton />
     </div>
   );
 };
