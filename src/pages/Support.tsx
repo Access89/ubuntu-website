@@ -1,9 +1,8 @@
-
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function SupportPage() {
   return (
-    <section className="h-screen bg-white py-16 pt-32">
+    <section className="min-h-[700px] bg-white py-16 pt-32">
       <div className="px-6 md:px-16 lg:px-24">
         <div className="max-w-7xl mx-auto">
           {/* <div className="text-center mb-12">
