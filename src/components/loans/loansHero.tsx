@@ -19,7 +19,7 @@ const LoansHero: React.FC<LoansHeroProps> = ({ type }) => {
 
   return (
     <section className="bg-white py-16 pt-32 container mx-auto px-6 md:px-20 flex flex-col md:flex-row items-center justify-center gap-12">
-      <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl lg:max-w-[90%] gap-y-12">
+      <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl lg:max-w-[90%] gap-y-12 gap-x-6 ">
         {/* Left Image */}
         <div className="relative w-full h-full lg:h-[85vh] md:w-1/2 flex justify-center">
           <img
@@ -34,7 +34,8 @@ const LoansHero: React.FC<LoansHeroProps> = ({ type }) => {
           />
           <div className="absolute bottom-0 left-0 right-0 h-6 lg:h-10 bg-gradient-to-t from-white to-transparent" />
           <div className="absolute top-0 left-0 right-0 h-6 lg:h-10 bg-gradient-to-b from-white to-transparent" />
-          <div className="absolute inset-0 right-0 w-28 bg-gradient-to-r from-white to-transparent" />
+          <div className="absolute inset-0 w-28 bg-gradient-to-r from-white to-transparent" />
+          <div className="absolute top-0 bottom-0 right-0 w-10 md:w-16 lg:w-28 bg-gradient-to-l from-white to-transparent" />
         </div>
 
         {/* Right Text Content */}
