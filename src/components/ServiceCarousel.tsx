@@ -82,17 +82,25 @@ export default function ServiceCarousel() {
     : services;
 
   return (
-    <div className="relative mx-auto">
+    <div className={`relative mx-auto ${isInvestments ? "max-w-7xl" : ""}`}>
       {/* Carousel viewport */}
       <div
-        className="overflow-hidden px-6 sm:px-12 lg:px-28 w-full"
+        className={`overflow-hidden px-6 sm:px-12 w-full ${
+          isInvestments ? "lg:px-0" : "lg:px-28"
+        } `}
         ref={emblaRef}
       >
-        <div className="flex gap-4 touch-pan-y cursor-grab active:cursor-grabbing">
+        <div
+          className={`flex gap-4 touch-pan-y cursor-grab active:cursor-grabbing ${
+            isInvestments ? "lg:grid lg:grid-cols-2" : ""
+          } `}
+        >
           {visibleServices.map((service, idx) => (
             <div
               key={idx}
-              className="embla__slide min-w-[280px] min-h-[300px] sm:min-w-[400px] max-w-[300px] shrink-0"
+              className={`embla__slide min-w-[280px] min-h-[300px] sm:min-w-[400px] max-w-[300px] shrink-0 ${
+                isInvestments ? "lg:max-w-full lg:w-full " : ""
+              }`}
               onClick={() =>
                 service.href && window.open(service.href, "_blank")
               }
@@ -118,7 +126,11 @@ export default function ServiceCarousel() {
       </div>
 
       {/* Navigation buttons */}
-      <div className="justify-end sm:pr-12 lg:pr-20 mt-16 gap-4 -translate-y-1/2 w-full flex px-4 z-10">
+      <div
+        className={`justify-end sm:pr-12 lg:pr-20 mt-16 gap-4 -translate-y-1/2 w-full flex px-4 z-10 ${
+          isInvestments ? "lg:hidden" : ""
+        }`}
+      >
         <button
           type="button"
           title="Scroll to previous"
