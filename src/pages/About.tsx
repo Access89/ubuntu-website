@@ -5,7 +5,7 @@ const AboutUs = () => {
         <div className="max-w-7xl mx-auto space-y-24">
           {/* Intro Section */}
           <div className="text-center max-w-4xl mx-auto pt-16">
-            <h2 className="text-blue-800 font-semibold text-sm uppercase tracking-wider mb-3">
+            <h2 className="text-[#225EA6] font-semibold text-sm uppercase tracking-wider mb-3">
               About Ubuntu Capital
             </h2>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
@@ -24,7 +24,7 @@ const AboutUs = () => {
           {/* Mission & Vision Section */}
           <div className="grid md:grid-cols-2 gap-16">
             <div>
-              <h3 className="text-2xl font-semibold mb-4 text-blue-800">
+              <h3 className="text-2xl font-semibold mb-4 text-[#225EA6]">
                 Our Mission
               </h3>
               <p className="text-gray-600 text-lg leading-relaxed">
@@ -34,7 +34,7 @@ const AboutUs = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold mb-4 text-blue-800">
+              <h3 className="text-2xl font-semibold mb-4 text-[#225EA6]">
                 Our Vision
               </h3>
               <p className="text-gray-600 text-lg leading-relaxed">
@@ -46,7 +46,7 @@ const AboutUs = () => {
 
             {/* Objectives Section */}
             <div>
-              <h3 className="text-2xl font-semibold mb-4 text-blue-800 text-left">
+              <h3 className="text-2xl font-semibold mb-4 text-[#225EA6] text-left">
                 Our Objectives
               </h3>
               <ul className="list-disc list-inside space-y-4 text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
@@ -66,7 +66,7 @@ const AboutUs = () => {
 
             {/* Compliance Section */}
             <div className="text-left max-w-4xl mx-auto">
-              <h3 className="text-2xl font-semibold mb-4 text-blue-800">
+              <h3 className="text-2xl font-semibold mb-4 text-[#225EA6]">
                 Compliance & Integrity
               </h3>
               <p className="text-gray-600 text-lg leading-relaxed">
@@ -80,14 +80,14 @@ const AboutUs = () => {
 
           {/* Core Values Section */}
           {/* <div className="text-center">
-            <h3 className="text-2xl font-semibold mb-6 text-blue-800">
+            <h3 className="text-2xl font-semibold mb-6 text-[#225EA6]">
               Our Core Values
             </h3>
             <div className="flex flex-wrap justify-center gap-8">
               {["Respect", "Trust", "Excellence"].map((value) => (
                 <div
                   key={value}
-                  className="bg-blue-50 text-blue-900 px-6 py-4 rounded-xl shadow-sm text-lg font-medium"
+                  className="bg-blue-50 text-[#225EA6] px-6 py-4 rounded-xl shadow-sm text-lg font-medium"
                 >
                   {value}
                 </div>
@@ -99,12 +99,12 @@ const AboutUs = () => {
       {/* Our Values */}
       <section className="bg-[#F5F8FA] py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-semibold mb-12 text-blue-800">
+          <h2 className="text-3xl font-semibold mb-12 text-[#225EA6]">
             Our Core Values
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-medium mb-2 text-blue-900">
+              <h3 className="text-xl font-medium mb-2 text-[#225EA6]">
                 Respect
               </h3>
               <p className="text-gray-600">
@@ -113,14 +113,14 @@ const AboutUs = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-medium mb-2 text-blue-900">Trust</h3>
+              <h3 className="text-xl font-medium mb-2 text-[#225EA6]">Trust</h3>
               <p className="text-gray-600">
                 We build lasting relationships through honesty, transparency,
                 and reliability in every financial interaction.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-medium mb-2 text-blue-900">
+              <h3 className="text-xl font-medium mb-2 text-[#225EA6]">
                 Excellence
               </h3>
               <p className="text-gray-600">
