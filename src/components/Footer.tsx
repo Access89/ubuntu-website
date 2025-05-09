@@ -3,7 +3,7 @@ import logo from "@/assets/images/logo.png";
 
 const quickLinks = [
   { label: "Home", href: "/" },
-  { label: "Investment", href: "#" },
+  { label: "Investment", href: "/investments" },
   {
     label: "Loan",
     href: "/loans",

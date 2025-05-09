@@ -2,13 +2,13 @@ import Faq from "@/components/FAQ";
 import LoanOffers from "@/components/loans/LoanOffers";
 import LoansHero from "@/components/loans/loansHero";
 
-function Loans() {
+function Investments() {
   return (
     <div>
-      <LoansHero type="loan" />
-      <LoanOffers type="loan" />
+      <LoansHero type="investment" />
+      <LoanOffers type="investment" />
       <Faq />
     </div>
   );
 }
-export default Loans;
+export default Investments;

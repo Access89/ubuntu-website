@@ -33,6 +33,44 @@ const defaultFaqs = [
   },
 ];
 
+const investmentFaqs = [
+  {
+    question: "How can I open an Investment Account?",
+    answer:
+      "Choose an investment product, provide ID and required documents, complete the application, fund your account, and start investing.",
+  },
+  {
+    question: "What types of investment plans do you offer?",
+    answer:
+      "We offer short-term, long-term, and goal-based investment plans designed to match your financial goals.",
+  },
+  {
+    question: "What is the expected return on investment?",
+    answer:
+      "Returns vary based on the plan selected. We offer both fixed and market-linked options. Check individual plan details for estimated returns.",
+  },
+  {
+    question: "Can I withdraw my investment before maturity?",
+    answer:
+      "Yes, but early withdrawal terms depend on the specific product. Some may incur penalties or affect your returns.",
+  },
+  {
+    question: "Is my investment safe?",
+    answer:
+      "We prioritize your financial safety and only offer products that meet regulatory and risk guidelines. However, all investments carry some level of risk.",
+  },
+  {
+    question: "Who can apply for an Investment Account?",
+    answer:
+      "Anyone over 18 with valid documentation can open an investment account. Business and joint accounts are also supported.",
+  },
+  {
+    question: "How do I monitor my investment performance?",
+    answer:
+      "You can track your investments through our online dashboard, which provides real-time updates on returns and growth.",
+  },
+];
+
 const loanFaqs = [
   {
     question: "How do I apply for a loan?",
@@ -59,13 +97,11 @@ const loanFaqs = [
     answer:
       "Yes, early repayment is allowed. In fact, it may reduce your overall interest payments. Please review your loan terms for any prepayment fees.",
   },
-
   {
     question: "Is collateral required for all loan types?",
     answer:
       "Not all loans require collateral. Unsecured loans are available, but secured loans may offer better interest rates.",
   },
-
   {
     question: "What are the interest rates on your loans?",
     answer:
@@ -76,7 +112,12 @@ const loanFaqs = [
 const Faq = () => {
   const location = useLocation();
   const isLoans = location.pathname === "/loans";
-  const faqsToShow = isLoans ? loanFaqs : defaultFaqs;
+  const isInvestments = location.pathname === "/investments";
+  const faqsToShow = isLoans
+    ? loanFaqs
+    : isInvestments
+    ? investmentFaqs
+    : defaultFaqs;
 
   return (
     <section className="py-16 bg-white">

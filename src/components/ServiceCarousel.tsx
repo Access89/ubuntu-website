@@ -74,7 +74,12 @@ export default function ServiceCarousel() {
 
   const location = useLocation();
   const isLoans = location.pathname === "/loans";
-  const visibleServices = isLoans ? services.slice(2, 5) : services;
+  const isInvestments = location.pathname === "/investments";
+  const visibleServices = isLoans
+    ? services.slice(2, 5)
+    : isInvestments
+    ? services.slice(0, 2)
+    : services;
 
   return (
     <div className="relative mx-auto">

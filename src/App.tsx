@@ -1,5 +1,6 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Investments from "./pages/Investments";
 import Landing from "./pages/Landing";
 import Loans from "./pages/Loans";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -21,6 +22,7 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/loans" element={<Loans />} />
+        <Route path="/investments" element={<Investments />} />
       </Routes>
       {!isLandingPage && <Footer />}
     </div>
