@@ -4,12 +4,10 @@ import Impact from "@/components/landing/Impact";
 import CallToAction from "@/components/landing/CallToAction";
 import Mission from "@/components/landing/Mission";
 import Faq from "@/components/shared/FAQ";
-import Footer from "@/components/shared/Footer";
 
 function Landing() {
   return (
     <div className="bg-white min-h-screen">
-      {/* <Header /> */}
       <main>
         <Hero />
         <Products />
@@ -20,7 +18,6 @@ function Landing() {
           <Faq />
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

@@ -15,18 +15,16 @@ function App() {
 }
 
 const AppContent = () => {
-  const isLandingPage = window.location.pathname === "/";
-
   return (
     <div className="bg-white min-h-screen">
-      {!isLandingPage && <Header />}
+      <Header />
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/loans" element={<Loans />} />
         <Route path="/investments" element={<Investments />} />
         <Route path="/about" element={<About />} />
       </Routes>
-      {!isLandingPage && <Footer />}
+      <Footer />
     </div>
   );
 };
