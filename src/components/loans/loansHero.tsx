@@ -7,7 +7,7 @@ const LoansHero: React.FC = () => {
     <section className="bg-white py-16 pt-32 container mx-auto px-6 md:px-20 flex flex-col md:flex-row items-center justify-center gap-12">
       <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl lg:max-w-[90%] gap-y-12">
         {/* Left Image */}
-        <div className=" relative w-full h-[85vh] md:w-1/2 flex justify-center">
+        <div className=" relative w-full h-full lg:h-[85vh] md:w-1/2 flex justify-center">
           <img
             src={hero}
             alt="Happy woman with laptop and cash"
@@ -16,10 +16,10 @@ const LoansHero: React.FC = () => {
           <img
             src={noise}
             alt="noise"
-            className="absolute inset-0 w-full h-auto lg:h-full opacity-10 z-0"
+            className="absolute inset-0 w-full h-full opacity-10 z-0"
           />
-          <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white to-transparent" />
-          <div className="absolute top-0 left-0 right-0 h-10 bg-gradient-to-b from-white to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-6 lg:h-10 bg-gradient-to-t from-white to-transparent" />
+          <div className="absolute top-0 left-0 right-0 h-6 lg:h-10 bg-gradient-to-b from-white to-transparent" />
           <div className="absolute inset-0 right-0 w-28 bg-gradient-to-r from-white to-transparent" />
         </div>
 
