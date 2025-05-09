@@ -97,8 +97,8 @@ const AboutUs = () => {
         </div>
       </div>
       {/* Our Values */}
-      <section className="bg-[#F5F8FA] py-20">
-        <div className="max-w-6xl mx-auto px-6 text-center">
+      <section className="bg-[#F5F8FA] py-20 px-6 md:px-16 lg:px-24">
+        <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-semibold mb-12 text-[#225EA6]">
             Our Core Values
           </h2>
@@ -107,14 +107,14 @@ const AboutUs = () => {
               <h3 className="text-xl font-medium mb-2 text-[#225EA6]">
                 Respect
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-lg">
                 We treat every individual with dignity and fairness, valuing the
                 diversity of our clients and their unique financial needs.
               </p>
             </div>
             <div>
               <h3 className="text-xl font-medium mb-2 text-[#225EA6]">Trust</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-lg">
                 We build lasting relationships through honesty, transparency,
                 and reliability in every financial interaction.
               </p>
@@ -123,7 +123,7 @@ const AboutUs = () => {
               <h3 className="text-xl font-medium mb-2 text-[#225EA6]">
                 Excellence
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-lg">
                 We strive for superior service delivery and innovation, ensuring
                 we exceed expectations and empower sustainable growth.
               </p>
@@ -133,8 +133,8 @@ const AboutUs = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-[#225EA6] text-white py-16">
-        <div className="max-w-6xl mx-auto px-6 text-center">
+      <section className="bg-[#225EA6] text-white py-16 px-6 md:px-16 lg:px-24">
+        <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-semibold mb-4">
             Ready to Take Your Financial Future to the Next Level?
           </h2>
