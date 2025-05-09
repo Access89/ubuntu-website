@@ -9,7 +9,7 @@ function LoanOffers({ type }: LoanOffersProps) {
 
   const headingText = isLoan
     ? "Looking for quick financing? Explore our loan options"
-    : "Grow your wealth with these tailored investment opportunities";
+    : "Grow your wealth with our tailored investment opportunities";
 
   return (
     <div className="bg-[#225EA6]/10 py-16 md:py-24">
