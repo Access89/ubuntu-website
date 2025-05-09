@@ -3,10 +3,10 @@
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronRight } from "lucide-react";
-import wallet from "../assets/images/wallet-line.png";
-import futurePlan from "../assets/images/future-plan.png";
-import loans from "../assets/images/loans.png";
-import SME from "../assets/images/SME.png";
+import wallet from "@/assets/images/wallet-line.png";
+import futurePlan from "@/assets/images/future-plan.png";
+import loans from "@/assets/images/loans.png";
+import SME from "@/assets/images/SME.png";
 import { Icon } from "@iconify/react";
 import { useLocation } from "react-router-dom";
 

@@ -1,4 +1,4 @@
-import ServiceCarousel from "../ServiceCarousel";
+import ServiceCarousel from "../shared/ServiceCarousel";
 
 interface LoanOffersProps {
   type: "loan" | "investment";

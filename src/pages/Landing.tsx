@@ -1,10 +1,10 @@
-import Hero from "@/components/Hero";
-import Products from "@/components/Products";
-import Impact from "@/components/Impact";
-import CallToAction from "@/components/CallToAction";
-import Mission from "@/components/Mission";
-import Faq from "@/components/FAQ";
-import Footer from "@/components/Footer";
+import Hero from "@/components/landing/Hero";
+import Products from "@/components/landing/Products";
+import Impact from "@/components/landing/Impact";
+import CallToAction from "@/components/landing/CallToAction";
+import Mission from "@/components/landing/Mission";
+import Faq from "@/components/shared/FAQ";
+import Footer from "@/components/shared/Footer";
 
 function Landing() {
   return (

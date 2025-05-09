@@ -1,7 +1,7 @@
-import heroImage from "../assets/images/hero-image.png";
-import checkIcon from "../assets/images/check.png";
-import noise from "../assets/images/Noise.png";
-import Header from "./Header";
+import heroImage from "@/assets/images/hero-image.png";
+import checkIcon from "@/assets/images/check.png";
+import noise from "@/assets/images/Noise.png";
+import Header from "../shared/Header";
 
 export default function Hero() {
   const cards = [

@@ -1,5 +1,5 @@
 // import { Icon } from "@iconify/react/dist/iconify.js";
-import ServiceCarousel from "./ServiceCarousel";
+import ServiceCarousel from "../shared/ServiceCarousel";
 
 export default function Products() {
   return (
