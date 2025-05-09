@@ -1,13 +1,12 @@
-import CallToAction from "@/components/landing/CallToAction";
-import Faq from "@/components/shared/FAQ";
+
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function SupportPage() {
   return (
-    <section className="bg-white py-16 pt-32">
+    <section className="h-screen bg-white py-16 pt-32">
       <div className="px-6 md:px-16 lg:px-24">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+          {/* <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-semibold text-[#225EA6] mb-4">
               We're Here to Help
             </h1>
@@ -16,11 +15,11 @@ export default function SupportPage() {
               Find answers below or reach out to us directly. We're committed to
               supporting your financial journey.
             </p>
-          </div>
+          </div> */}
           {/* Contact Information Section */}
           <section className="py-10">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#225EA6] mb-12">
+              <h2 className="text-3xl md:text-4xl font-semibold text-center text-black mb-12">
                 General Contact Information
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-center text-xl">
@@ -63,10 +62,10 @@ export default function SupportPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto">
+      {/* <div className="max-w-7xl mx-auto">
         <Faq />
         <CallToAction />
-      </div>
+      </div> */}
     </section>
   );
 }
