@@ -29,7 +29,7 @@ export default function Mission() {
           of our customers.
         </p>
         <a
-          href="#"
+          href="/about"
           className="text-[#225EA6] text-xl lg:text-2xl leading-[150%] font-[300] hover:underline inline-flex items-center"
         >
           About us <span className="ml-1">→</span>

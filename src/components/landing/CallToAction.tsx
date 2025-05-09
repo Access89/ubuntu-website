@@ -17,7 +17,15 @@ export default function CallToAction() {
       </div>
 
       {/* CTA Button */}
-      <button className="lg:border-2 border-white rounded-full lg:px-6 lg:py-2 font-semibold hover:bg-white hover:text-[#120B27] transition-colors">
+      <button
+        onClick={() =>
+          window.open(
+            "https://digital.foundry-platform.com/ubuntu-capital",
+            "_blank"
+          )
+        }
+        className="lg:border-2 border-white rounded-full lg:px-6 lg:py-2 font-semibold hover:bg-white hover:text-[#120B27] transition-colors"
+      >
         <span className="lg:hidden">
           <Icon icon={"maki:arrow"} />
         </span>
