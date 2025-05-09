@@ -1,116 +1,132 @@
-import React from "react";
-
-const About: React.FC = () => {
+const AboutUs = () => {
   return (
-    <main className="bg-white text-gray-800">
-      {/* Hero Section */}
-      <section className="bg-[#F5F8FA] py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Empowering the Future with IoT Solutions
-          </h1>
-          <p className="text-lg md:text-xl text-gray-600">
-            Connecting devices, data, and people to drive innovation and
-            efficiency.
-          </p>
-        </div>
-      </section>
-
-      {/* Our Mission */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
-            <p className="text-gray-700 leading-relaxed">
-              At IoT Innovators, our mission is to revolutionize industries by
-              providing cutting-edge IoT solutions that enhance connectivity,
-              streamline operations, and foster sustainable growth.
+    <section className="bg-white text-gray-800 pt-20 ">
+      <div className="px-6 md:px-16 lg:px-24 pb-20">
+        <div className="max-w-7xl mx-auto space-y-24">
+          {/* Intro Section */}
+          <div className="text-center max-w-4xl mx-auto pt-16">
+            <h2 className="text-blue-800 font-semibold text-sm uppercase tracking-wider mb-3">
+              About Ubuntu Capital
+            </h2>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              Empowering Growth with Trust, Respect & Excellence
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+              Ubuntu Capital Microfinance Limited is a tier 2 deposit-taking
+              institution established in 2014 and began operations in 2015. Our
+              focus is to provide timely financial solutions and business
+              support through innovation, technology, and a highly motivated
+              team. We strive to help individuals and businesses grow
+              sustainably within dynamic market conditions.
             </p>
           </div>
-          <div>
-            <img
-              src="/images/mission.jpg"
-              alt="Our Mission"
-              className="w-full rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
-      </section>
 
+          {/* Mission & Vision Section */}
+          <div className="grid md:grid-cols-2 gap-16">
+            <div>
+              <h3 className="text-2xl font-semibold mb-4 text-blue-800">
+                Our Mission
+              </h3>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                To become the preferred money transmission enabler bridging the
+                gap between the banked and unbanked, and the go-to microfinance
+                institution in the industry.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold mb-4 text-blue-800">
+                Our Vision
+              </h3>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                To be the best microfinance company in Ghana that meets
+                international standards in profitability, corporate governance,
+                and stakeholder value.
+              </p>
+            </div>
+
+            {/* Objectives Section */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-4 text-blue-800 text-left">
+                Our Objectives
+              </h3>
+              <ul className="list-disc list-inside space-y-4 text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                <li>
+                  To provide financial support to individuals and micro, small,
+                  and medium enterprises (MSMEs).
+                </li>
+                <li>
+                  To leverage technology to improve operational efficiency.
+                </li>
+                <li>
+                  To delight customers by exceeding their expectations and
+                  becoming their number one financial partner.
+                </li>
+              </ul>
+            </div>
+
+            {/* Compliance Section */}
+            <div className="text-left max-w-4xl mx-auto">
+              <h3 className="text-2xl font-semibold mb-4 text-blue-800">
+                Compliance & Integrity
+              </h3>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Ubuntu Capital complies fully with the Bank of Ghana's
+                regulations and other statutory guidelines. We uphold ethical
+                standards and operate with integrity, respecting all legal
+                frameworks guiding financial services in Ghana.
+              </p>
+            </div>
+          </div>
+
+          {/* Core Values Section */}
+          {/* <div className="text-center">
+            <h3 className="text-2xl font-semibold mb-6 text-blue-800">
+              Our Core Values
+            </h3>
+            <div className="flex flex-wrap justify-center gap-8">
+              {["Respect", "Trust", "Excellence"].map((value) => (
+                <div
+                  key={value}
+                  className="bg-blue-50 text-blue-900 px-6 py-4 rounded-xl shadow-sm text-lg font-medium"
+                >
+                  {value}
+                </div>
+              ))}
+            </div>
+          </div> */}
+        </div>
+      </div>
       {/* Our Values */}
       <section className="bg-[#F5F8FA] py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-semibold mb-12">Our Core Values</h2>
+          <h2 className="text-3xl font-semibold mb-12 text-blue-800">
+            Our Core Values
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-medium mb-2">Innovation</h3>
+              <h3 className="text-xl font-medium mb-2 text-blue-900">
+                Respect
+              </h3>
               <p className="text-gray-600">
-                Continuously pushing the boundaries to develop forward-thinking
-                solutions.
+                We treat every individual with dignity and fairness, valuing the
+                diversity of our clients and their unique financial needs.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-medium mb-2">Integrity</h3>
+              <h3 className="text-xl font-medium mb-2 text-blue-900">Trust</h3>
               <p className="text-gray-600">
-                Upholding the highest standards of honesty and transparency in
-                all our endeavors.
+                We build lasting relationships through honesty, transparency,
+                and reliability in every financial interaction.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-medium mb-2">Collaboration</h3>
+              <h3 className="text-xl font-medium mb-2 text-blue-900">
+                Excellence
+              </h3>
               <p className="text-gray-600">
-                Working together with clients and partners to achieve shared
-                success.
+                We strive for superior service delivery and innovation, ensuring
+                we exceed expectations and empower sustainable growth.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Team */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-semibold mb-12">Meet Our Team</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {/* Team Member 1 */}
-            <div>
-              <img
-                src="/images/team1.jpg"
-                alt="Team Member"
-                className="w-32 h-32 mx-auto rounded-full mb-4"
-              />
-              <h4 className="text-lg font-medium">Alex Johnson</h4>
-              <p className="text-gray-500 text-sm">Chief Executive Officer</p>
-            </div>
-            {/* Team Member 2 */}
-            <div>
-              <img
-                src="/images/team2.jpg"
-                alt="Team Member"
-                className="w-32 h-32 mx-auto rounded-full mb-4"
-              />
-              <h4 className="text-lg font-medium">Maria Rodriguez</h4>
-              <p className="text-gray-500 text-sm">Head of Engineering</p>
-            </div>
-            {/* Team Member 3 */}
-            <div>
-              <img
-                src="/images/team3.jpg"
-                alt="Team Member"
-                className="w-32 h-32 mx-auto rounded-full mb-4"
-              />
-              <h4 className="text-lg font-medium">Liam Smith</h4>
-              <p className="text-gray-500 text-sm">Lead Designer</p>
-            </div>
-            {/* Team Member 4 */}
-            <div>
-              <img
-                src="/images/team4.jpg"
-                alt="Team Member"
-                className="w-32 h-32 mx-auto rounded-full mb-4"
-              />
-              <h4 className="text-lg font-medium">Sophie Lee</h4>
-              <p className="text-gray-500 text-sm">Marketing Director</p>
             </div>
           </div>
         </div>
@@ -120,11 +136,12 @@ const About: React.FC = () => {
       <section className="bg-[#225EA6] text-white py-16">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-semibold mb-4">
-            Ready to Transform Your Business with IoT?
+            Ready to Take Your Financial Future to the Next Level?
           </h2>
-          <p className="mb-6">
-            Contact us today to discover how our solutions can drive your
-            success.
+          <p className="mb-6 max-w-2xl mx-auto text-lg">
+            Whether you're a growing business or an individual seeking financial
+            support, Ubuntu Capital is here to help you thrive. Let’s build a
+            better tomorrow—together.
           </p>
           <a
             href="/contact"
@@ -134,8 +151,8 @@ const About: React.FC = () => {
           </a>
         </div>
       </section>
-    </main>
+    </section>
   );
 };
 
-export default About;
+export default AboutUs;
