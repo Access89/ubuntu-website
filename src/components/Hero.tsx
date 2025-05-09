@@ -43,6 +43,7 @@ export default function Hero() {
           alt="noise"
           className="absolute inset-0 w-full h-auto lg:h-screen opacity-70 z-0"
         />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
 
         {/* Cards */}
         <div className="relative md:absolute inset-x-0 md:bottom-10 xl:bottom-20 max-w-7xl md:w-[90%] lg:w-[65%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-4 px-4 z-20">
