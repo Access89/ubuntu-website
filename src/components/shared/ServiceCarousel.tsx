@@ -139,7 +139,7 @@ export default function ServiceCarousel() {
           className={`bg-white shadow rounded-full p-2 transition duration-300 ${
             canScrollPrev
               ? "hover:bg-gray-100"
-              : "opacity-40 cursor-not-allowed"
+              : "opacity-50 cursor-not-allowed"
           }`}
         >
           <ChevronRight className="rotate-180 w-6 h-6 text-gray-800" />
