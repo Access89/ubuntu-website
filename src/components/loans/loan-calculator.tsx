@@ -77,6 +77,7 @@ export const LoanCalculator = () => {
                 thumb: "bg-[#225EA6]",
                 track: ["bg-[#225EA6]/20", "h-2"],
                 filler: "bg-[#225EA6]",
+                mark: "pt-3",
               }}
               step={12}
               marks={[12, 24, 36, 48, 60].map((val) => ({
