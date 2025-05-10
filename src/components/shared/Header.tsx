@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import logo from "@/assets/images/logo.png";
@@ -8,16 +9,14 @@ import logo from "@/assets/images/logo.png";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Investments", href: "/investments" },
-  {
-    label: "Loans",
-    href: "/loans",
-  },
+  { label: "Loans", href: "/loans" },
   { label: "About Us", href: "/about" },
   { label: "Support", href: "/support" },
 ];
 
 export default function Header() {
   const [showBorder, setShowBorder] = useState(false);
+  const pathname = useLocation().pathname;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +30,7 @@ export default function Header() {
   return (
     <header
       className={`w-full fixed z-50 top-0 bg-white transition-shadow duration-200 ${
-        showBorder ? "border-b border-gray-200" : " "
+        showBorder ? "border-b border-gray-200" : ""
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 lg:px-0 py-2 flex items-center justify-between">
@@ -46,7 +45,11 @@ export default function Header() {
             <a
               key={link.label}
               href={link.href}
-              className="hover:text-blue-600 transition-colors"
+              className={`transition-colors ${
+                pathname === link.href
+                  ? "text-[#225EA6] font-[500]"
+                  : "hover:text-blue-600 font-[300]"
+              }`}
             >
               {link.label}
             </a>
@@ -54,7 +57,7 @@ export default function Header() {
         </nav>
         <div></div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu */}
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger>
@@ -69,7 +72,11 @@ export default function Header() {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="hover:text-blue-600 font-light transition-colors"
+                    className={`transition-colors duration-300 ${
+                      pathname === link.href
+                        ? "text-[#225EA6] font-medium"
+                        : "hover:text-blue-600 font-light"
+                    }`}
                   >
                     {link.label}
                   </a>
