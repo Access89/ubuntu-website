@@ -86,8 +86,8 @@ export default function ServiceCarousel() {
       {/* Carousel viewport */}
       <div
         className={`overflow-hidden px-6 sm:px-12 w-full ${
-          isInvestments ? "lg:px-0" : "lg:px-28"
-        } `}
+          isInvestments ? "xl:px-0" : "xl:px-[calc((100vw-1280px)/2)]"
+        }`}
         ref={emblaRef}
       >
         <div
