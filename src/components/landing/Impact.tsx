@@ -24,7 +24,7 @@ export default function ImpactSection() {
             Transforming Vision into Value: A Look at Our Impact Through the
             Numbers
           </h2>
-          <p className="text-xl lg:text-2xl leading-[150%] font-[300]">
+          <p className="text-xl lg:text-2xl leading-[180%] font-[300]">
             Ubuntu Capital Microfinance is driving financial inclusion across
             Ghana by empowering over 45,000 clients in 8 regions with access to
             ethical and reliable financial services. With over GHS 120 million

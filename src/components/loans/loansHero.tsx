@@ -34,8 +34,8 @@ const LoansHero: React.FC<LoansHeroProps> = ({ type }) => {
           />
           <div className="absolute bottom-0 left-0 right-0 h-6 lg:h-10 bg-gradient-to-t from-white to-transparent" />
           <div className="absolute top-0 left-0 right-0 h-6 lg:h-10 bg-gradient-to-b from-white to-transparent" />
-          <div className="absolute inset-0 w-28 bg-gradient-to-r from-white to-transparent" />
-          <div className="absolute top-0 bottom-0 right-0 w-10 md:w-16 lg:w-28 bg-gradient-to-l from-white to-transparent" />
+          <div className="absolute inset-0 w-10 md:w-16 xl:w-28 bg-gradient-to-r from-white to-transparent" />
+          <div className="absolute top-0 bottom-0 right-0 w-10 md:w-16 xl:w-28 bg-gradient-to-l from-white to-transparent" />
         </div>
 
         {/* Right Text Content */}

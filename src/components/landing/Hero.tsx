@@ -5,19 +5,16 @@ import noise from "@/assets/images/Noise.png";
 export default function Hero() {
   const cards = [
     {
-      icon: "📝",
       title: "Borrow",
       description:
         "Our digital lending solution, providing your customers with quick and convenient access to the financing they need.",
     },
     {
-      icon: "💼",
       title: "Invest",
       description:
         "Simplified onboarding for businesses and customers with our intuitive, user-friendly digital platform.",
     },
     {
-      icon: "📊",
       title: "Loan Calculator",
       description:
         "Expand banking access with our agent network platform, connecting underserved areas to essential financial services through local intermediaries.",
@@ -44,7 +41,7 @@ export default function Hero() {
         <div className="absolute top-0 left-0 right-0 h-96 bg-gradient-to-b from-white to-transparent" />
 
         {/* Cards */}
-        <div className="relative md:absolute inset-x-0 md:bottom-10 xl:bottom-20 max-w-7xl md:w-[90%] lg:w-[65%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-4 px-4 z-20">
+        <div className="relative md:absolute inset-x-0 md:bottom-5 xl:bottom-20 max-w-7xl md:w-[90%] lg:w-[65%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-4 px-4 z-20">
           {cards.map((card, index) => (
             <div
               key={index}
@@ -52,10 +49,10 @@ export default function Hero() {
             >
               <div className="text-blue-600 text-2xl mb-3"></div>
               <img src={checkIcon} alt="icon" className="w-5 h-5 mb-3" />
-              <h3 className="text-lg text-[15px] text-[#1A1A1A] font-semibold mb-2">
+              <h3 className="text-lg md:text-[15px] text-[#1A1A1A] font-semibold mb-2">
                 {card.title}
               </h3>
-              <p className="text-[#575757] leading-[150%] text-base lg:text-xs">
+              <p className="text-[#575757] leading-[150%] text-base md:text-xs">
                 {card.description}
               </p>
             </div>
