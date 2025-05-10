@@ -40,7 +40,7 @@ export const LoanCalculator = () => {
               Loan Amount <span className="text-[#242424]">9.5% APR</span>
             </p>
             <Slider
-              className="max-w-md "
+              className="w-full sm:max-w-[97%]"
               minValue={minLoan}
               maxValue={maxLoan}
               step={1000}
@@ -70,7 +70,7 @@ export const LoanCalculator = () => {
               Loan Tenor (Months)
             </p>
             <Slider
-              className="max-w-md"
+              className="w-[97%]"
               minValue={12}
               maxValue={60}
               classNames={{
