@@ -31,7 +31,7 @@ export const LoanCalculator = () => {
   ];
 
   return (
-    <div className="bg-white p-5 md:px-28  mx-auto">
+    <div className="bg-white py-5 md:px-28  mx-auto">
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 ">
         {/* Loan Input Section */}
         <div className="flex-1 lg:border-r border-gray-300 lg:pr-10 md:min-w-[365px]">

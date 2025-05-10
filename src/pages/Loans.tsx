@@ -15,7 +15,7 @@ function Loans() {
             <h2 className="text-3xl sm:text-4xl font-semibold mb-4">
               Loan Calculator
             </h2>
-            <p className="text-[#929292] mt-2 text-base md:text-xl">
+            <p className="text-[#929292] mt-2 text-lg md:text-xl">
               Estimate your monthly payments and find the loan that works for
               you.
             </p>
