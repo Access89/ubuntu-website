@@ -24,7 +24,10 @@ export default function SupportPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-center text-xl">
                 <div className="bg-white p-8 sm:border-r">
                   <div className="text-[#225EA6] mb-4">
-                    <Icon icon={"gis:map-poi"} className="mx-auto w-15 h-15" />
+                    <Icon
+                      icon={"ph:building-office-thin"}
+                      className="mx-auto w-15 h-15"
+                    />
                   </div>
                   <p className="text-lg font-medium">Head Office</p>
                   <p className="text-gray-700">
