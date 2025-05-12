@@ -1,3 +1,5 @@
+import { Icon } from "@iconify/react/dist/iconify.js";
+
 const AboutUs = () => {
   return (
     <section className="bg-white text-gray-800 pt-20 ">
@@ -23,7 +25,7 @@ const AboutUs = () => {
 
           {/* Mission & Vision Section */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-16">
-            <div className=" md:p-8 sm:border-r">
+            <div className=" md:p-8 md:border-r">
               <h3 className="text-2xl font-semibold mb-4 text-[#225EA6]">
                 Our Mission
               </h3>
@@ -33,7 +35,7 @@ const AboutUs = () => {
                 institution in the industry.
               </p>
             </div>
-            <div className=" md:p-8 md:border-r">
+            <div className=" md:p-8 lg:border-r">
               <h3 className="text-2xl font-semibold mb-4 text-[#225EA6]">
                 Our Vision
               </h3>
@@ -103,31 +105,37 @@ const AboutUs = () => {
             Our Core Values
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-medium mb-2 text-[#225EA6]">
-                Respect
-              </h3>
-              <p className="text-gray-600 text-lg">
-                We treat every individual with dignity and fairness, valuing the
-                diversity of our clients and their unique financial needs.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-medium mb-2 text-[#225EA6]">Trust</h3>
-              <p className="text-gray-600 text-lg">
-                We build lasting relationships through honesty, transparency,
-                and reliability in every financial interaction.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-medium mb-2 text-[#225EA6]">
-                Excellence
-              </h3>
-              <p className="text-gray-600 text-lg">
-                We strive for superior service delivery and innovation, ensuring
-                we exceed expectations and empower sustainable growth.
-              </p>
-            </div>
+            {[
+              {
+                title: "Respect",
+                description:
+                  "We treat every individual with dignity and fairness, valuing the diversity of our clients and their unique financial needs.",
+                icon: "material-symbols:diversity-1",
+              },
+              {
+                title: "Trust",
+                description:
+                  "We build lasting relationships through honesty, transparency, and reliability in every financial interaction.",
+                icon: "mdi:handshake-outline",
+              },
+              {
+                title: "Excellence",
+                description:
+                  "We strive for superior service delivery and innovation, ensuring we exceed expectations and empower sustainable growth.",
+                icon: "la:award",
+              },
+            ].map((value, index) => (
+              <div key={index} className=" p-6">
+                <Icon
+                  icon={value.icon}
+                  className="text-4xl lg:text-5xl mx-auto mb-4 text-[#225EA6]"
+                />
+                <h3 className="text-xl font-semibold mb-2 text-[#225EA6]">
+                  {value.title}
+                </h3>
+                <p className="text-gray-600 text-lg">{value.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
