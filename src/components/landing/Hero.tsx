@@ -22,20 +22,20 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative min-h-[700px] lg:min-h-screen md:pt-0 pb-32 md:pb-5">
+    <section className="relative min-h-[700px] lg:min-h-[700px] md:pt-0 pb-32 md:pb-5">
       {/* Hero Image */}
       <div className="relative w-full">
         <img
           src={heroImage}
           alt="hero"
-          className="w-full sm:w-[85%] lg:w-[60%] h-full mx-auto pt-24 relative z-10"
+          className="w-full sm:w-[85%] lg:w-[60%] max-w-7xl h-full mx-auto pt-24 relative z-10"
         />
 
         {/* Noise Overlay */}
         <img
           src={noise}
           alt="noise"
-          className="absolute inset-0 w-full h-auto lg:h-screen opacity-70 z-0"
+          className="absolute inset-0 w-full h-auto lg:h-full opacity-70 z-0"
         />
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
         <div className="absolute top-0 left-0 right-0 h-96 bg-gradient-to-b from-white to-transparent" />

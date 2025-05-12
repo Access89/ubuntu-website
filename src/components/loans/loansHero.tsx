@@ -21,7 +21,7 @@ const LoansHero: React.FC<LoansHeroProps> = ({ type }) => {
     <section className="bg-white py-16 pt-32 container mx-auto px-6 md:px-20 flex flex-col md:flex-row items-center justify-center gap-12">
       <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl lg:max-w-[90%] gap-y-12 gap-x-6 ">
         {/* Left Image */}
-        <div className="relative w-full h-full lg:h-[85vh] md:w-1/2 flex justify-center">
+        <div className="relative w-full h-full lg:h-full md:w-1/2 flex justify-center">
           <img
             src={hero}
             alt="Happy woman with laptop and cash"
