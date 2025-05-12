@@ -123,13 +123,12 @@ export const LoanCalculator = () => {
               "_blank"
             )
           }
-          className="border border-[#225EA6] text-base p-4  rounded-full"
+          className="border border-[#225EA6] bg-[#225EA6] text-base p-6  rounded-full"
         >
           Apply Now
           <Icon
             icon="material-symbols-light:arrow-right-alt-rounded"
             fontSize={30}
-            className="text-[#225EA6]"
           />
         </Button>
       </div>
