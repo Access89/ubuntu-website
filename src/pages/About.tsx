@@ -142,8 +142,8 @@ const AboutUs = () => {
 
       {/* Call to Action */}
       <section className="bg-[#225EA6] text-white py-16 px-6 md:px-16 lg:px-24">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold mb-4">
+        <div className="max-w-6xl mx-auto text-center px-5">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4">
             Ready to Take Your Financial Future to the Next Level?
           </h2>
           <p className="mb-6 max-w-2xl mx-auto text-lg">
