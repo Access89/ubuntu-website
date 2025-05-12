@@ -22,8 +22,8 @@ const AboutUs = () => {
           </div>
 
           {/* Mission & Vision Section */}
-          <div className="grid md:grid-cols-2 gap-16">
-            <div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-16">
+            <div className=" md:p-8 sm:border-r">
               <h3 className="text-2xl font-semibold mb-4 text-[#225EA6]">
                 Our Mission
               </h3>
@@ -33,7 +33,7 @@ const AboutUs = () => {
                 institution in the industry.
               </p>
             </div>
-            <div>
+            <div className=" md:p-8 md:border-r">
               <h3 className="text-2xl font-semibold mb-4 text-[#225EA6]">
                 Our Vision
               </h3>
@@ -45,7 +45,7 @@ const AboutUs = () => {
             </div>
 
             {/* Objectives Section */}
-            <div>
+            {/* <div>
               <h3 className="text-2xl font-semibold mb-4 text-[#225EA6] text-left">
                 Our Objectives
               </h3>
@@ -62,10 +62,10 @@ const AboutUs = () => {
                   becoming their number one financial partner.
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             {/* Compliance Section */}
-            <div className="text-left max-w-4xl mx-auto">
+            <div className="text-left max-w-4xl mx-auto md:p-8">
               <h3 className="text-2xl font-semibold mb-4 text-[#225EA6]">
                 Compliance & Integrity
               </h3>
