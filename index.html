@@ -2,17 +2,77 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Favicon and App Icons -->
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Viewport and Responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+
+    <!-- SEO Title and Description -->
+    <title>Ubuntu Capital Microfinance Limited | Trusted Microfinance in Ghana</title>
+    <meta name="description" content="Ubuntu Capital is a licensed Tier 2 microfinance company in Ghana providing innovative financial services to individuals and MSMEs with integrity, trust, and excellence." />
+
+    <!-- Keywords -->
+    <meta name="keywords" content="Ubuntu Capital, Microfinance Ghana, Tier 2 Microfinance, Financial Services Ghana, MSME Loans, Trustworthy Finance, Business Loans Ghana" />
+
+    <!-- Author -->
+    <meta name="author" content="Ubuntu Capital Microfinance Limited" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.ubuntucapital.com" />
+
+    <!-- Open Graph Tags (for social media sharing) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ubuntu Capital Microfinance Limited" />
+    <meta property="og:description" content="Your trusted partner in financial growth. Supporting businesses and individuals through innovative and credible financial solutions in Ghana." />
+    <meta property="og:image" content="/og-image.jpg" /> <!-- Replace with actual OG image path -->
+    <meta property="og:url" content="https://www.ubuntucapital.com" />
+    <meta property="og:site_name" content="Ubuntu Capital Microfinance Limited" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ubuntu Capital Microfinance Limited" />
+    <meta name="twitter:description" content="Providing trusted microfinance services to Ghana's individuals and SMEs since 2015." />
+    <meta name="twitter:image" content="/og-image.jpg" /> <!-- Replace with actual image path -->
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FinancialService",
+        "name": "Ubuntu Capital Microfinance Limited",
+        "url": "https://www.ubuntucapital.com",
+        "logo": "/logo.png",
+        "description": "A licensed Tier 2 microfinance company in Ghana focused on supporting businesses and individuals with innovative and credible financial solutions.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "GH",
+          "addressRegion": "Ghana"
+        },
+        "foundingDate": "2014-10-01",
+        "areaServed": "GH",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Customer Service",
+          "email": "info@ubuntucapital.com",
+          "telephone": "+233-XXX-XXXXXX"
+        }
+      }
+    </script>
+
+    <!-- Vite Inject -->
+    <script type="module" src="/src/main.tsx"></script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+
