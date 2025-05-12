@@ -24,12 +24,12 @@ const AboutUs = () => {
           </div>
 
           {/* Mission & Vision Section */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-16 text-center">
             <div className=" md:p-8 md:border-r">
               <h3 className="text-2xl font-semibold mb-4 text-[#225EA6]">
                 Our Mission
               </h3>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-600 text-lg md:text-[19px] leading-relaxed">
                 To become the preferred money transmission enabler bridging the
                 gap between the banked and unbanked, and the go-to microfinance
                 institution in the industry.
@@ -39,7 +39,7 @@ const AboutUs = () => {
               <h3 className="text-2xl font-semibold mb-4 text-[#225EA6]">
                 Our Vision
               </h3>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-600 text-lg md:text-[19px] leading-relaxed">
                 To be the best microfinance company in Ghana that meets
                 international standards in profitability, corporate governance,
                 and stakeholder value.
@@ -51,7 +51,7 @@ const AboutUs = () => {
               <h3 className="text-2xl font-semibold mb-4 text-[#225EA6] text-left">
                 Our Objectives
               </h3>
-              <ul className="list-disc list-inside space-y-4 text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+              <ul className="list-disc list-inside space-y-4 text-gray-600 text-lg md:text-[19px] leading-relaxed max-w-3xl mx-auto">
                 <li>
                   To provide financial support to individuals and micro, small,
                   and medium enterprises (MSMEs).
@@ -67,11 +67,11 @@ const AboutUs = () => {
             </div> */}
 
             {/* Compliance Section */}
-            <div className="text-left max-w-4xl mx-auto md:p-8">
+            <div className="max-w-4xl mx-auto md:p-8">
               <h3 className="text-2xl font-semibold mb-4 text-[#225EA6]">
                 Compliance & Integrity
               </h3>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-600 text-lg md:text-[19px] leading-relaxed">
                 Ubuntu Capital complies fully with the Bank of Ghana's
                 regulations and other statutory guidelines. We uphold ethical
                 standards and operate with integrity, respecting all legal
