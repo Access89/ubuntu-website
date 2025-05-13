@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import hero_1 from "@/assets/images/hero-1.jpg";
 import hero_2 from "@/assets/images/hero-2.jpg";
@@ -9,7 +9,7 @@ const images = [hero_1, hero_2, hero_3];
 
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
-  const pathname = useLocation().pathname;
+  // const pathname = useLocation().pathname;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -18,19 +18,19 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const isLandingPage = pathname === "/";
-  const containerClasses = isLandingPage
-    ? "w-full container px-10 mx-auto h-full py-[120px]"
-    : "h-[60vh]";
+  // const isLandingPage = pathname === "/";
+  // const containerClasses = isLandingPage
+  //   ? "w-full container px-10 mx-auto h-full py-[120px]"
+  //   : "h-[60vh]";
 
   return (
     <div className="relative">
       <section
         id="herosection"
-        className={`relative ${containerClasses} flex items-center justify-center h-screen text-center text-white select-none mb-16`}
+        className={`relative flex items-center justify-center h-screen text-center text-white select-none mb16`}
       >
         {/* Background Image Slider */}
-        <div className="absolute inset-0 rounded-[20px] overflow-hidden mt-20">
+        <div className="absolute inset-0 rounded[20px] overflow-hidden mt-16">
           {images.map((src, index) => (
             <img
               key={index}
@@ -64,7 +64,7 @@ const HeroSection = () => {
               </motion.h1>
 
               <motion.p
-                className="mt-4 text-lg xl:text-xl text-gray-200 max-w-2xl mx-auto"
+                className="mt-4 text-lg sm:text-xl xl:text-2xl text-gray-200 max-w-2xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
@@ -81,7 +81,7 @@ const HeroSection = () => {
                 transition={{ delay: 0.8, duration: 0.6 }}
               >
                 <a
-                  href="#services"
+                  href="/loans"
                   className="inline-flex items-center gap-2 bg-[#225EA6] text-white px-6 py-3 text-lg font-medium rounded-lg hover:bg-[#1E4F8C] transition duration-300"
                 >
                   Explore Our Solutions <span>→</span>
