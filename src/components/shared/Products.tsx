@@ -51,7 +51,7 @@ function Products() {
   const secondRow = visibleServices.slice(3);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 md:px-20 2xl:px-0 ">
+    <div className=" ">
       {/* First Row - 3 columns */}
       <div
         className={`grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6 ${
@@ -93,7 +93,9 @@ function Card({
         <div className="text-2xl font-semibold text-gray-900">
           {service.title}
         </div>
-        <p className="text-gray-600 text-base line-clamp-4">{service.text}</p>
+        <p className="text-gray-600 text-base lg:text-lg line-clamp-4">
+          {service.text}
+        </p>
         <div className="absolute bottom-5 sm:right-10 right-5 flex items-center justify-end text-black hover:bg-gray-800 rounded-full p-2 hover:text-white mt-2 transition duration-300 ">
           <Icon
             icon="mingcute:arrow-right-fill"
