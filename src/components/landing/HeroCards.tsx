@@ -20,7 +20,7 @@ function HeroCards() {
   ];
 
   return (
-    <div className="relative md:absolute inset-x-0 md:bottom-0 xl:-bottom-[10%] max-w-7xl  mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-4 px-4 z-20 border lg:rounded-xl border-[#ACACAC]/50 bg-white pb-6 py-6">
+    <div className="relative md:absolute inset-x-0 md:bottom-0 xl:-bottom-[10%] max-w-7xl  mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-4 px-4 z-20 border 2xl:rounded-xl border-[#ACACAC]/50 bg-white pb-6 py-6">
       {cards.map((card, index) => (
         <div
           key={index}

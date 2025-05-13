@@ -11,10 +11,10 @@ function Landing() {
     <div className="bg-white min-h-screen">
       <main>
         <Hero />
+        <HeroCards />
         <div className="max-w-7xl mx-auto py-10">
           <Mission />
         </div>
-        <HeroCards />
         <LoanOffers />
         <div className="max-w-7xl mx-auto">
           <Impact />
