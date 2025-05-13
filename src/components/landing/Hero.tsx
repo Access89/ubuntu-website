@@ -1,64 +1,98 @@
-import heroImage from "@/assets/images/hero-image.png";
-import checkIcon from "@/assets/images/check.png";
-import noise from "@/assets/images/Noise.png";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import hero_1 from "@/assets/images/hero-1.jpg";
+import hero_2 from "@/assets/images/hero-2.jpg";
+import hero_3 from "@/assets/images/hero-3.jpg";
 
-export default function Hero() {
-  const cards = [
-    {
-      title: "Borrow",
-      description:
-        "Our digital lending solution, providing your customers with quick and convenient access to the financing they need.",
-    },
-    {
-      title: "Invest",
-      description:
-        "Simplified onboarding for businesses and customers with our intuitive, user-friendly digital platform.",
-    },
-    {
-      title: "Loan Calculator",
-      description:
-        "Expand banking access with our agent network platform, connecting underserved areas to essential financial services through local intermediaries.",
-    },
-  ];
+const images = [hero_1, hero_2, hero_3];
+
+const HeroSection = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+  const pathname = useLocation().pathname;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 10000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const isLandingPage = pathname === "/";
+  const containerClasses = isLandingPage
+    ? "w-full container px-10 mx-auto h-full py-[120px]"
+    : "h-[60vh]";
 
   return (
-    <section className="relative min-h-[700px] lg:min-h-screen md:pt-0 pb-32 md:pb-5">
-      {/* Hero Image */}
-      <div className="relative w-full h-full">
-        <img
-          src={heroImage}
-          alt="hero"
-          className="w-full sm:w-[85%] lg:w-[60%] h-full mx-auto pt-24 relative z-10"
-        />
-
-        {/* Noise Overlay */}
-        <img
-          src={noise}
-          alt="noise"
-          className="absolute inset-0 w-full h-auto lg:h-full opacity-70 z-0"
-        />
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
-        <div className="absolute top-0 left-0 right-0 h-96 bg-gradient-to-b from-white to-transparent" />
-
-        {/* Cards */}
-        <div className="relative md:absolute inset-x-0 md:bottom-5 xl:bottom-20 max-w-7xl md:w-[90%] lg:w-[65%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-4 px-4 z-20">
-          {cards.map((card, index) => (
-            <div
+    <div className="relative">
+      <section
+        id="herosection"
+        className={`relative ${containerClasses} flex items-center justify-center h-screen text-center text-white select-none mb-16`}
+      >
+        {/* Background Image Slider */}
+        <div className="absolute inset-0 rounded-[20px] overflow-hidden mt-20">
+          {images.map((src, index) => (
+            <img
               key={index}
-              className="bg-white shadow-lg rounded-4xl px-6 py-5 max-w-sm h-full  w-full sm:w-auto border border-[#ACACAC]/50 sm:last:hidden md:last:block"
-            >
-              <div className="text-blue-600 text-2xl mb-3"></div>
-              <img src={checkIcon} alt="icon" className="w-5 h-5 mb-3" />
-              <h3 className="text-lg md:text-[15px] text-[#1A1A1A] font-semibold mb-2">
-                {card.title}
-              </h3>
-              <p className="text-[#575757] leading-[150%] text-base md:text-xs">
-                {card.description}
-              </p>
-            </div>
+              src={src}
+              alt={`Ubuntu Capital Microfinance Hero ${index + 1}`}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                index === currentImage ? "opacity-100" : "opacity-0"
+              }`}
+            />
           ))}
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
-      </div>
-    </section>
+
+        {/* Animated Content */}
+        <div className="relative z-10 max-w-3xl px-6 mt-[5%]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentImage}
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.8 }}
+            >
+              <motion.h1
+                className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight drop-shadow-lg"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+              >
+                Empowering Growth. <br /> Enabling Dreams.
+              </motion.h1>
+
+              <motion.p
+                className="mt-4 text-lg xl:text-xl text-gray-200 max-w-2xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+              >
+                At Ubuntu Capital Microfinance, we bridge the gap between the
+                banked and unbanked with trusted, technology-driven financial
+                solutions for individuals and small businesses across Ghana.
+              </motion.p>
+
+              <motion.div
+                className="mt-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+              >
+                <a
+                  href="#services"
+                  className="inline-flex items-center gap-2 bg-[#225EA6] text-white px-6 py-3 text-lg font-medium rounded-lg hover:bg-[#1E4F8C] transition duration-300"
+                >
+                  Explore Our Solutions <span>→</span>
+                </a>
+              </motion.div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </section>
+    </div>
   );
-}
+};
+
+export default HeroSection;
