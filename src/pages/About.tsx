@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
+import CEO from "@/assets/images/CEO.jpg";
 
 const AboutUs = () => {
   return (
@@ -134,6 +135,64 @@ const AboutUs = () => {
                   {value.title}
                 </h3>
                 <p className="text-gray-600 text-lg">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Team Section */}
+      <section className="bg-white py-20 px-6 md:px-16 lg:px-24">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold mb-12 text-[#225EA6]">
+            Meet Our Team
+          </h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-12">
+            {[
+              {
+                name: "Grace Mensah",
+                role: "Chief Executive Officer",
+                img: CEO,
+              },
+              {
+                name: "Kwame Asante",
+                role: "Head of Operations",
+                img: CEO,
+              },
+              {
+                name: "Linda Owusu",
+                role: "Compliance Officer",
+                img: CEO,
+              },
+              {
+                name: "Samuel Boateng",
+                role: "Finance Manager",
+                img: CEO,
+              },
+              {
+                name: "Akosua Darko",
+                role: "Customer Relations Lead",
+                img: CEO,
+              },
+              {
+                name: "Yaw Ofori",
+                role: "IT & Systems Lead",
+                img: CEO,
+              },
+            ].map((member, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center shadow-lg rounded-xl p-6 bg-[#F9FBFD] hover:shadow-xl transition duration-300"
+              >
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-32 h-32 object-cover rounded-full mb-4 border-4 border-[#225EA6]"
+                />
+                <h3 className="text-lg font-semibold text-[#225EA6]">
+                  {member.name}
+                </h3>
+                <p className="text-gray-600">{member.role}</p>
               </div>
             ))}
           </div>
