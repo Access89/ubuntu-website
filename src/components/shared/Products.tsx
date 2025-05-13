@@ -9,7 +9,7 @@ const services = [
   {
     title: "Ubuntu Fixed Deposit Investment",
     icon: wallet,
-    text: "This offers customers specific interest rates for depositing funds over periods of 91, 182, or 365 days.",
+    text: "This offers customers specific interest rates for depositing funds over periods of 91, 182, or 365 days.",
   },
   {
     title: "Ubuntu Future Investment Plan",
