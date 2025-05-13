@@ -20,18 +20,18 @@ function HeroCards() {
   ];
 
   return (
-    <div className="relative md:absolut inset-x-0 md:bottom-5 xl:-bottom-[30%] max-w-7xl  mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-4 px-4 z-20">
+    <div className="relative md:absolute inset-x-0 md:bottom-0 xl:-bottom-[10%] max-w-7xl  mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-4 px-4 z-20 border lg:rounded-xl border-[#ACACAC]/50 bg-white pb-6 py-6">
       {cards.map((card, index) => (
         <div
           key={index}
-          className="bg-white shadow-lg rounded-4xl px-6 py-5 max-w-sm h-full border-r  w-full sm:w-auto border border-[#ACACAC]/50 sm:last:hidden md:last:block"
+          className="bg-white px-6  max-w-sm h-full md:border-r  w-full sm:w-auto border-[#ACACAC]/50 last:border-0 sm:last:hidden md:last:block"
         >
           <div className="text-blue-600 text-2xl mb-3"></div>
           <img src={checkIcon} alt="icon" className="w-5 h-5 mb-3" />
-          <h3 className="text-lg md:text-[15px] text-[#1A1A1A] font-semibold mb-2">
+          <h3 className="text-lg md:text-xl text-[#1A1A1A] font-semibold mb-2">
             {card.title}
           </h3>
-          <p className="text-[#575757] leading-[150%] text-base md:text-lg lg:text-xl">
+          <p className="text-[#575757] leading-[150%] text-base md:textlg line-clamp-2">
             {card.description}
           </p>
         </div>
