@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import logo from "@/assets/images/logo.png";
@@ -42,9 +42,9 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 text-base font-normal text-gray-700">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
-              href={link.href}
+              to={link.href}
               className={`transition-colors ${
                 pathname === link.href
                   ? "text-[#225EA6] font-[500]"
@@ -52,7 +52,7 @@ export default function Header() {
               }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
         <div></div>
@@ -69,9 +69,9 @@ export default function Header() {
               </div>
               <nav className="flex flex-col space-y-4 text-gray-700 font-medium">
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.label}
-                    href={link.href}
+                    to={link.href}
                     className={`transition-colors duration-300 ${
                       pathname === link.href
                         ? "text-[#225EA6] font-medium"
@@ -79,7 +79,7 @@ export default function Header() {
                     }`}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
               </nav>
             </SheetContent>

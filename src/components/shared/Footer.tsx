@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import logo from "@/assets/images/logo.png";
+import { Link } from "react-router-dom";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -48,12 +49,12 @@ export default function Footer() {
           <ul className="space-y-1 text-[#F5F5F5] text-sm">
             {quickLinks.map(({ label, href }) => (
               <li key={label}>
-                <a
-                  href={href}
+                <Link
+                  to={href}
                   className="hover:text-blue-500 transition-colors duration-200 text-base sm:text-lg leading-[150%] font-[300]"
                 >
                   {label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

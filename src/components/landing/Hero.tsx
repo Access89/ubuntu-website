@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import hero_1 from "@/assets/images/hero-1.jpg";
 import hero_2 from "@/assets/images/hero-2.jpg";
 import hero_3 from "@/assets/images/hero-3.jpg";
+import { Link } from "react-router-dom";
 
 const images = [hero_1, hero_2, hero_3];
 
@@ -30,7 +31,7 @@ const HeroSection = () => {
         className={`relative flex items-center justify-center h-screen text-center text-white select-none mb16`}
       >
         {/* Background Image Slider */}
-        <div className="absolute inset-0 rounded[20px] overflow-hidden mt-16">
+        <div className="absolute inset-0 rounded[20px] overflow-hidden bg-[#225EA6] mt-16">
           {images.map((src, index) => (
             <img
               key={index}
@@ -80,12 +81,12 @@ const HeroSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
               >
-                <a
-                  href="/loans"
+                <Link
+                  to="/loans"
                   className="inline-flex items-center gap-2 bg-[#225EA6] text-white px-6 py-3 text-lg font-medium rounded-lg hover:bg-[#1E4F8C] transition duration-300"
                 >
                   Explore Our Solutions <span>→</span>
-                </a>
+                </Link>
               </motion.div>
             </motion.div>
           </AnimatePresence>
