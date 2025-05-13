@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 export default function Mission() {
   return (
-    <section className="pt-24 w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-6 md:px-10 lg:px-3 py-12 bg-white">
+    <section className="pt-24 w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-6 md:px-10 2xl:px-3 py-12 bg-white">
       {/* Left - Logo / Brand */}
       <div className="hidden lg:block text-[#754C2A] text-left lg:w-1/2">
         <div className="border-l-4 md:border-l-8 border-[#754C2A] pl-4 md:pl-6 montserrat py-5">
@@ -28,12 +30,12 @@ export default function Mission() {
           and innovative, cutting-edge products that satisfy the financial needs
           of our customers.
         </p>
-        <a
-          href="/about"
+        <Link
+          to="/about"
           className="text-[#225EA6] text-xl lg:text-2xl leading-[150%] font-[300] hover:underline inline-flex items-center"
         >
           About us <span className="ml-1">→</span>
-        </a>
+        </Link>
       </div>
     </section>
   );
