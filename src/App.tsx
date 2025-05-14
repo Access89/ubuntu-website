@@ -7,6 +7,7 @@ import Loans from "./pages/Loans";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SupportPage from "./pages/Support";
 import BackToTopButton from "./components/shared/BackToTopButton";
+import NotFound from "./components/shared/NotFound";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ const AppContent = () => {
         <Route path="/investments" element={<Investments />} />
         <Route path="/about" element={<About />} />
         <Route path="/support" element={<SupportPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
       <BackToTopButton />
