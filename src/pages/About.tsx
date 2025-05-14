@@ -1,5 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import CEO from "@/assets/images/CEO.jpg";
+import { Link } from "react-router-dom";
+// import TeamSwiper from "@/components/about/OurTeam";
 
 const AboutUs = () => {
   return (
@@ -198,6 +200,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+      {/* <TeamSwiper /> */}
 
       {/* Call to Action */}
       <section className="bg-[#225EA6] text-white py-16 px-6 md:px-16 lg:px-24">
@@ -210,12 +213,12 @@ const AboutUs = () => {
             support, Ubuntu Capital is here to help you thrive. Let’s build a
             better tomorrow—together.
           </p>
-          <a
-            href="/contact"
+          <Link
+            to="/support"
             className="inline-block bg-white text-[#225EA6] px-6 py-3 rounded-full font-medium"
           >
             Get in Touch
-          </a>
+          </Link>
         </div>
       </section>
     </section>
