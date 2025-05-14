@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import NotFoundIllustration from "@/assets/images/404-illustration.svg"; // optional illustration
+import NotFoundIllustration from "@/assets/images/404-illustration.svg";
 
 function NotFound() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-white px-6 py-12">
       <div className="max-w-2xl text-center">
-        {/* Optional illustration */}
         <img
           src={NotFoundIllustration}
           alt="Page not found"
