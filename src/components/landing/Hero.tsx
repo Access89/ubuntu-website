@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-// import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import hero_1 from "@/assets/images/hero-1.jpg";
 import hero_2 from "@/assets/images/hero-2.jpg";
@@ -10,7 +9,6 @@ const images = [hero_1, hero_2, hero_3];
 
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
-  // const pathname = useLocation().pathname;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,30 +17,28 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // const isLandingPage = pathname === "/";
-  // const containerClasses = isLandingPage
-  //   ? "w-full container px-10 mx-auto h-full py-[120px]"
-  //   : "h-[60vh]";
-
   return (
     <div className="relative">
       <section
         id="herosection"
-        className={`relative flex items-center justify-center h-screen text-center text-white select-none mb16`}
+        className="relative flex items-center justify-center h-screen text-center text-white select-none mb-16"
       >
-        {/* Background Image Slider */}
-        <div className="absolute inset-0 rounded[20px] overflow-hidden bg-[#225EA6] mt-16">
+        {/* Background Image Slider using divs and backgroundImage */}
+        <div className="absolute inset-0 overflow-hidden bg-[#225EA6] mt-16">
           {images.map((src, index) => (
-            <img
+            <div
               key={index}
-              src={src}
-              alt={`Ubuntu Capital Microfinance Hero ${index + 1}`}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              style={{
+                backgroundImage: `url(${src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+              className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
                 index === currentImage ? "opacity-100" : "opacity-0"
               }`}
             />
           ))}
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
         {/* Animated Content */}
