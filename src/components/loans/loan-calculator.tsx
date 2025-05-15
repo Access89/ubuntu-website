@@ -40,10 +40,10 @@ export const LoanCalculator = () => {
   ];
 
   return (
-    <div className="lg:py-12">
-      <div className="max-w-7xl border border-gray-300/70 rounded-4xl mx-auto mt-12 pt-12 lg:pb-6 gap-6 px-6 sm:px-12 lg:px-0">
+    <div id="loan-calculator" className="lg:py-12">
+      <div className="max-w-7xl border border-gray-300/70 rounded-4xl mx-auto mt-12 pt-12 lg:pb-10 gap-6 px-6 sm:px-12 lg:px-0">
         {/* Section Header */}
-        <div id="loan-calculator" className="mb-10 text-left md:text-center">
+        <div className="mb-4 md:mb-10 text-left md:text-center">
           <h2 className="text-3xl sm:text-4xl font-semibold mb-4">
             Loan Calculator
           </h2>
@@ -52,7 +52,7 @@ export const LoanCalculator = () => {
           </p>
         </div>
         <div className="bg-white py-5 md:px-28 mx-auto rounded-4xl">
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 ">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 items-center justify-between">
             {/* Loan Input Section */}
             <div className="flex-1 lg:border-r border-gray-300 lg:pr-10 md:min-w-[365px]">
               <div className="mb-5 text-base lg:text-lg">
@@ -60,7 +60,7 @@ export const LoanCalculator = () => {
                   Loan Type
                 </p>
                 <Select>
-                  <SelectTrigger className="w-full text-base p-5 mt-2">
+                  <SelectTrigger className="w-full md:text-base p-5 mt-2">
                     <SelectValue placeholder="Select a loan type" />
                   </SelectTrigger>
                   <SelectContent className="w-full">
@@ -125,47 +125,49 @@ export const LoanCalculator = () => {
               </div>
             </div>
 
-            {/* Loan Summary Card */}
-            <Card className=" bg-[#225EA6] text-white rounded-md flex flex-col justify-between md:min-w-[365px] lg:w-[450px]">
-              {loan_summary.map((item, index) => (
-                <>
-                  <p
-                    key={index}
-                    className=" p-4 flex items-center justify-between w-full"
-                  >
-                    <p className=" text-base lg:text-lg font-light text-[#FDFEFD] w-[50%]">
-                      {item.title}
+            <div className="flex flex-col items-center justify-betwee">
+              {/* Loan Summary Card */}
+              <Card className="border rounded-md flex flex-col justify-between md:min-w-[365px] lg:w-[450px]">
+                {loan_summary.map((item, index) => (
+                  <>
+                    <p
+                      key={index}
+                      className=" p-4 flex items-center justify-between w-full"
+                    >
+                      <p className=" text-base lg:text-lg font-light  w-[50%]">
+                        {item.title}
+                      </p>
+                      <p className="font-medium text-lg lg:text-xl w-full flex justify-between">
+                        <p></p>
+                        <p className="">{item.value}</p>
+                      </p>
                     </p>
-                    <p className="text-[$FDFEFD] font-medium text-lg lg:text-xl w-full flex justify-between">
-                      <p></p>
-                      <p className="">{item.value}</p>
-                    </p>
-                  </p>
-                  {index < loan_summary.length - 1 && (
-                    <Divider className="bg-[#acacac]  h-[0.08px]" />
-                  )}
-                </>
-              ))}
-            </Card>
-          </div>
+                    {index < loan_summary.length - 1 && (
+                      <Divider className="bg-[#acacac]  h-[0.08px]" />
+                    )}
+                  </>
+                ))}
+              </Card>
 
-          {/* Apply Button */}
-          <div className="w-full flex justify-end mt-5 md:mt-10">
-            <Button
-              onClick={() =>
-                window.open(
-                  "https://digital.foundry-platform.com/ubuntu-capital",
-                  "_blank"
-                )
-              }
-              className="border border-[#225EA6] bg-[#225EA6] text-base p-6  rounded-full"
-            >
-              Apply Now
-              <Icon
-                icon="material-symbols-light:arrow-right-alt-rounded"
-                fontSize={30}
-              />
-            </Button>
+              {/* Apply Button */}
+              <div className="w-full flex justify-end mt-5 md:mt-10">
+                <Button
+                  onClick={() =>
+                    window.open(
+                      "https://digital.foundry-platform.com/ubuntu-capital",
+                      "_blank"
+                    )
+                  }
+                  className="border border-[#225EA6] bg-[#225EA6] text-base p-6  rounded-full"
+                >
+                  Apply Now
+                  <Icon
+                    icon="material-symbols-light:arrow-right-alt-rounded"
+                    fontSize={30}
+                  />
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
