@@ -147,38 +147,33 @@ const AboutUs = () => {
       <section className="bg-white py-20 px-6 md:px-16 lg:px-24">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-semibold mb-12 text-[#225EA6]">
-            Meet Our Team
+            Meet Our Board of Directors
           </h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-12">
             {[
               {
-                name: "Grace Mensah",
+                name: "Micheal Nana Sarfo",
                 role: "Chief Executive Officer",
                 img: CEO,
               },
               {
-                name: "Kwame Asante",
+                name: "Kwabena Ayirebi",
                 role: "Head of Operations",
                 img: CEO,
               },
               {
-                name: "Linda Owusu",
+                name: "Miriam W Mahamah",
                 role: "Compliance Officer",
                 img: CEO,
               },
               {
-                name: "Samuel Boateng",
+                name: "Amy K. Binneh",
                 role: "Finance Manager",
                 img: CEO,
               },
               {
-                name: "Akosua Darko",
+                name: "Kwadwo Boateng Adjei",
                 role: "Customer Relations Lead",
-                img: CEO,
-              },
-              {
-                name: "Yaw Ofori",
-                role: "IT & Systems Lead",
                 img: CEO,
               },
             ].map((member, index) => (
