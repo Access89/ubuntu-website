@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import CEO from "@/assets/images/CEO.jpg";
 import { Link } from "react-router-dom";
-// import TeamSwiper from "@/components/about/OurTeam";
+// import BoardOfDirectors from "@/components/about/BoardOfDirectors";
 
 const AboutUs = () => {
   return (
@@ -174,14 +174,14 @@ const AboutUs = () => {
             ].map((member, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center text-center shadow-lg rounded-xl p-6 bg-[#F9FBFD] hover:shadow-xl transition duration-300"
+                className="flex flex-col h-60 items-center text-center shadow-lg rounded-xl p-6 bg-[#F9FBFD] hover:shadow-xl transition duration-300"
               >
-                <img
+                {/* <img
                   src={member.img}
                   alt={member.name}
                   className="w-32 h-32 object-cover rounded-full mb-4 border-4 border-[#225EA6]"
-                />
-                <h3 className="text-lg font-semibold text-[#225EA6]">
+                /> */}
+                <h3 className="text-lg font-semibold text-[#225EA6] mt-auto">
                   {member.name}
                 </h3>
               </div>
@@ -189,7 +189,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      {/* <TeamSwiper /> */}
+      {/* <BoardOfDirectors /> */}
 
       {/* Call to Action */}
       <section className="bg-[#225EA6] text-white py-16 px-6 md:px-16 lg:px-24">
