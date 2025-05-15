@@ -153,27 +153,22 @@ const AboutUs = () => {
             {[
               {
                 name: "Micheal Nana Sarfo",
-                role: "Chief Executive Officer",
                 img: CEO,
               },
               {
                 name: "Kwabena Ayirebi",
-                role: "Head of Operations",
                 img: CEO,
               },
               {
                 name: "Miriam W Mahamah",
-                role: "Compliance Officer",
                 img: CEO,
               },
               {
                 name: "Amy K. Binneh",
-                role: "Finance Manager",
                 img: CEO,
               },
               {
                 name: "Kwadwo Boateng Adjei",
-                role: "Customer Relations Lead",
                 img: CEO,
               },
             ].map((member, index) => (
@@ -189,7 +184,6 @@ const AboutUs = () => {
                 <h3 className="text-lg font-semibold text-[#225EA6]">
                   {member.name}
                 </h3>
-                <p className="text-gray-600">{member.role}</p>
               </div>
             ))}
           </div>
