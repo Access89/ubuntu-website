@@ -57,7 +57,7 @@ const LoansHero: React.FC<LoansHeroProps> = ({ type }) => {
                   "_blank"
                 )
               }
-              className="border border-[#225EA6] bg-[#225EA6] text-base rounded-full"
+              className="border border-[#225EA6] bg-[#225EA6] text-base p-6 rounded-full"
             >
               Apply Now
               <Icon
