@@ -10,10 +10,13 @@ export default function CallToAction() {
           </h3>
 
           <p className=" text-xl lg:text-2xl font-[300] fontsemibold leading-[#150]">
-            Dial <span className="font-bold text-3xl">*789*712#</span> to manage
-            your account, apply for a loan, or check your balance—anytime,
-            anywhere, on any phone. No internet? No problem. Ubuntu Capital is
-            just a dial away.
+            Dial{" "}
+            <span className="font-bold text-3xl md:text-4xl lg:text-5xl">
+              *789*712#
+            </span>{" "}
+            to manage your account, apply for a loan, or check your
+            balance—anytime, anywhere, on any phone. No internet? No problem.
+            Ubuntu Capital is just a dial away.
           </p>
         </div>
 
