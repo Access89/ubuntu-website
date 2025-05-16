@@ -2,7 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import logo from "@/assets/images/header-logo.png";
 
@@ -77,17 +82,19 @@ export default function Header() {
               </div>
               <nav className="flex flex-col space-y-4 text-gray-700 font-medium">
                 {navLinks.map((link) => (
-                  <Link
-                    key={link.label}
-                    to={link.href}
-                    className={`transition-colors duration-300 ${
-                      pathname === link.href
-                        ? "text-[#225EA6] font-medium"
-                        : "hover:text-blue-600 font-light"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
+                  <SheetClose asChild>
+                    <Link
+                      key={link.label}
+                      to={link.href}
+                      className={`transition-colors duration-300 ${
+                        pathname === link.href
+                          ? "text-[#225EA6] font-medium"
+                          : "hover:text-blue-600 font-light"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </SheetClose>
                 ))}
               </nav>
             </SheetContent>
