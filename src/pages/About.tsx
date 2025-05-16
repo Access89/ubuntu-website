@@ -1,9 +1,22 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import CEO from "@/assets/images/CEO.jpg";
 import { Link } from "react-router-dom";
-import BoardOfDirectors from "@/components/about/BoardOfDirectors";
+// import BoardOfDirectors from "@/components/about/BoardOfDirectors";
 
 const AboutUs = () => {
+  const boardMembers = [
+    { name: "Micheal Nana Sarfo", img: CEO },
+    { name: "Kwabena Ayirebi", img: CEO },
+    { name: "Miriam W Mahamah", img: CEO },
+    { name: "Amy K. Binneh", img: CEO },
+    { name: "Kwadwo Boateng Adjei", img: CEO },
+  ];
+
+  const visibleMembers = boardMembers.length;
+  const fullRows = Math.floor(visibleMembers / 3) * 3;
+  const normalMembers = boardMembers.slice(0, fullRows);
+  const remainingMembers = boardMembers.slice(fullRows);
+
   return (
     <section className="bg-white text-gray-800 pt-20 ">
       <div className="px-6 md:px-16 lg:px-24 pb-20">
@@ -149,21 +162,8 @@ const AboutUs = () => {
           <h2 className="text-3xl font-semibold mb-12 text-[#225EA6]">
             Meet Our Board of Directors
           </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-12">
-            {[
-              {
-                name: "Micheal Nana Sarfo",
-                img: CEO,
-              },
-              {
-                name: "Kwabena Ayirebi",
-                img: CEO,
-              },
-              {
-                name: "Miriam W Mahamah",
-                img: CEO,
-              },
-            ].map((member, index) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
+            {normalMembers.map((member, index) => (
               <div
                 key={index}
                 className="flex flex-col h-60 items-center text-center shadow-lg rounded-xl p-6 bg-[#F9FBFD] hover:shadow-xl transition duration-300"
@@ -172,41 +172,38 @@ const AboutUs = () => {
                   src={member.img}
                   alt={member.name}
                   className="w-32 h-32 object-cover rounded-full mb-4 border-4 border-[#225EA6]"
+                  style={{ filter: "brightness(0.8)" }}
                 /> */}
                 <h3 className="text-lg font-semibold text-[#225EA6] mt-auto">
                   {member.name}
                 </h3>
               </div>
             ))}
-          </div>
-          <div className="grid sm:grid-cols-2 md:w-2/3 mx-auto mt-5 gap-12">
-            {[
-              {
-                name: "Amy K. Binneh",
-                img: CEO,
-              },
-              {
-                name: "Kwadwo Boateng Adjei",
-                img: CEO,
-              },
-            ].map((member, index) => (
-              <div
-                key={index}
-                className="flex flex-col h-60 items-center text-center shadow-lg rounded-xl p-6 bg-[#F9FBFD] hover:shadow-xl transition duration-300"
-              >
-                {/* <img
+
+            {remainingMembers.length > 0 && (
+            <div className="lg:col-span-3 flex flex-wrap justify-center gap-12">
+              {remainingMembers.map((member, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col h-60 items-center text-center shadow-lg rounded-xl p-6 bg-[#F9FBFD] hover:shadow-xl transition duration-300 w-full max-w-[350px]"
+                >
+                  {/* <img
                   src={member.img}
                   alt={member.name}
                   className="w-32 h-32 object-cover rounded-full mb-4 border-4 border-[#225EA6]"
+                  style={{ filter: "brightness(0.8)" }}
                 /> */}
-                <h3 className="text-lg font-semibold text-[#225EA6] mt-auto">
-                  {member.name}
-                </h3>
-              </div>
-            ))}
+                  <h3 className="text-lg font-semibold text-[#225EA6] mt-auto">
+                    {member.name}
+                  </h3>
+                </div>
+              ))}
+            </div>
+             )}
           </div>
         </div>
       </section>
+
       {/* <BoardOfDirectors /> */}
 
       {/* Call to Action */}
