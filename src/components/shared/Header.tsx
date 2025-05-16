@@ -36,7 +36,11 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 lg:px-0 py-2 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <img src={logo} alt="Ubuntu Capital Logo" className="h-12 w-auto" />
+          <img
+            src={logo}
+            alt="Ubuntu Capital Logo"
+            className="h-14 lg:h-16 w-auto"
+          />
         </div>
 
         {/* Desktop Navigation */}
@@ -65,7 +69,11 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="left" className="w-1/2 min-w-64 p-6 bg-white">
               <div className="mb-4">
-                <img src={logo} alt="Ubuntu Capital Logo" className="h-12" />
+                <img
+                  src={logo}
+                  alt="Ubuntu Capital Logo"
+                  className="h-14 -ml-4"
+                />
               </div>
               <nav className="flex flex-col space-y-4 text-gray-700 font-medium">
                 {navLinks.map((link) => (
