@@ -11,7 +11,7 @@ import {
   SelectItem,
   SelectLabel,
   SelectTrigger,
-} from "../ui/select";
+} from "@/components/ui/select";
 
 export const LoanCalculator = () => {
   const [loanAmount, setLoanAmount] = useState(75000);
@@ -125,7 +125,7 @@ export const LoanCalculator = () => {
               </div>
             </div>
 
-            <div className="flex flex-col items-center justify-betwee">
+            <div className="flex flex-col items-center justify-between">
               {/* Loan Summary Card */}
               <Card className="border rounded-md flex flex-col justify-between md:min-w-[365px] lg:w-[450px]">
                 {loan_summary.map((item, index) => (
@@ -134,7 +134,7 @@ export const LoanCalculator = () => {
                       key={index}
                       className=" p-4 flex items-center justify-between w-full"
                     >
-                      <p className=" text-base lg:text-lg font-light  w-[50%]">
+                      <p className=" text-base lg:text-lg text-[#929292] w-[50%]">
                         {item.title}
                       </p>
                       <p className="font-medium text-lg lg:text-xl w-full flex justify-between">
