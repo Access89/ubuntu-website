@@ -24,21 +24,18 @@ const HeroSection = () => {
         className="relative flex items-center justify-center h-screen text-center text-white select-none"
       >
         {/* Background Image Slider using divs and backgroundImage */}
-        <div className="absolute inset-0 overflow-hidden bg-[#225EA6] mt-16">
-          {images.map((src, index) => (
-            <div
+        <div className="absolute inset-0 z-0">
+          {images.map((slide, index) => (
+            <motion.div
               key={index}
-              style={{
-                backgroundImage: `url(${src})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-              className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
-                index === currentImage ? "opacity-100" : "opacity-0"
-              }`}
+              className="absolute inset-0 bg-cover bg-center w-full h-full"
+              style={{ backgroundImage: `url(${slide})` }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: index === currentImage ? 1 : 0 }}
+              transition={{ duration: 1 }}
             />
           ))}
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B2545]/90 via-[#0B2545]/70 md:to-[#0B2545]/10 to-[#0B2545]/30 " />
         </div>
 
         {/* Animated Content */}
@@ -46,9 +43,9 @@ const HeroSection = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentImage}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               transition={{ duration: 0.8 }}
             >
               <motion.h1
