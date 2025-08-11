@@ -1,13 +1,13 @@
-import Footer from "./components/shared/Footer";
-import Header from "./components/shared/Header";
-import About from "./pages/About";
-import Investments from "./pages/Investments";
-import Landing from "./pages/Landing";
-import Loans from "./pages/Loans";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SupportPage from "./pages/Support";
-import BackToTopButton from "./components/shared/BackToTopButton";
-import NotFound from "./components/shared/NotFound";
+import Footer from './components/shared/Footer';
+import Header from './components/shared/Header';
+import About from './pages/About';
+import Investments from './pages/Investments';
+import Landing from './pages/Landing';
+import Loans from './pages/Loans';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SupportPage from './pages/Support';
+import BackToTopButton from './components/shared/BackToTopButton';
+import NotFound from './components/shared/NotFound';
 
 function App() {
   return (

@@ -1,6 +1,6 @@
-import CountUp from "react-countup";
-import { useInView } from "react-intersection-observer";
-import { useState, useEffect } from "react";
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
+import { useState, useEffect } from 'react';
 
 export default function ImpactSection() {
   const [hasViewed, setHasViewed] = useState(false);
@@ -39,7 +39,7 @@ export default function ImpactSection() {
           {/* Stats with animated counters */}
           <div className="w-full mt-4 md:mt-6 lg:mt-8 mx-auto grid grid-cols-2 lg:grid-cols-4 gap-x-12 md:gap-x-16 gap-y-8">
             <StatItem
-              value={100}
+              value={8.5}
               suffix="K"
               label="Customer"
               hasViewed={hasViewed}
@@ -51,14 +51,14 @@ export default function ImpactSection() {
               hasViewed={hasViewed}
             />
             <StatItem
-              value={40}
+              value={30}
               suffix="%"
               label="Yearly growth"
               hasViewed={hasViewed}
             />
             <StatItem
-              value={300}
-              suffix="B"
+              value={120}
+              suffix="M"
               label="Current Money Managed"
               hasViewed={hasViewed}
             />
@@ -86,7 +86,7 @@ function StatItem({
         {hasViewed ? (
           <CountUp end={value} duration={2.5} suffix={suffix} />
         ) : (
-          "0"
+          '0'
         )}
       </h3>
       <p className="text-base lg:text-lg text-[#929292]">{label}</p>
