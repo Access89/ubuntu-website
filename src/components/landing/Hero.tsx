@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-// import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
 import hero_1 from '@/assets/images/hero-1.jpg';
 import hero_2 from '@/assets/images/hero-2.jpg';
@@ -117,30 +116,30 @@ const HeroSection = () => {
     <div className="relative">
       <section
         id="herosection"
-        className={`relative flex items-center justify-center h-screen text-center text-white select-none mb16`}
+        className="relative flex items-center justify-center h-screen text-center text-white select-none"
       >
-        {/* Background Image Slider */}
-        <div className="absolute inset-0 rounded[20px] overflow-hidden bg-[#225EA6] mt-16">
-          {images.map((src, index) => (
-            <img
+        {/* Background Image Slider using divs and backgroundImage */}
+        <div className="absolute inset-0 z-0">
+          {images.map((slide, index) => (
+            <motion.div
               key={index}
-              src={src}
-              alt={`Ubuntu Capital Microfinance Hero ${index + 1}`}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                index === currentImage ? 'opacity-100' : 'opacity-0'
-              }`}
+              className="absolute inset-0 bg-cover bg-center w-full h-full"
+              style={{ backgroundImage: `url(${slide})` }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: index === currentImage ? 1 : 0 }}
+              transition={{ duration: 1 }}
             />
           ))}
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B2545]/90 via-[#0B2545]/70 md:to-[#0B2545]/10 to-[#0B2545]/30 " />
         </div>
 
         <div className="relative z-10 max-w-3xl px-6 mt-[5%]">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentImage}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               transition={{ duration: 0.8 }}
             >
               {content[currentContentIndex].title}

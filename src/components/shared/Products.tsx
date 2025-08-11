@@ -89,19 +89,33 @@ function Card({
 }) {
   return (
     <div className={`min-h-[250px] ${className}`}>
-      <div className="relative h-full flex flex-col gap-4 bg-white rounded-3xl p-8 pt-10 md:p-10 md:pb-16 items-start transition duration-300 cursor-pointer">
+      <div
+        onClick={() =>
+          service.href &&
+          window.open(
+            "https://digital.foundry-platform.com/ubuntu-capital",
+            "_blank"
+          )
+        }
+        className="relative h-full flex flex-col gap-4 bg-white rounded-3xl p-8 pt-10 md:p-10 md:pb-16 items-start transition duration-300 cursor-pointer"
+      >
         <div className="text-2xl font-semibold text-gray-900">
           {service.title}
         </div>
         <p className="text-gray-600 text-base lg:text-lg line-clamp-4">
           {service.text}
         </p>
-        <div className="absolute bottom-5 sm:right-10 right-5 flex items-center justify-end text-black hover:bg-gray-800 rounded-full p-2 hover:text-white mt-2 transition duration-300 ">
+        <a
+          href="https://digital.foundry-platform.com/ubuntu-capital"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute bottom-5 sm:right-10 right-5 flex items-center justify-end text-black hover:bg-gray-800 rounded-full p-2 hover:text-white mt-2 transition duration-300 "
+        >
           <Icon
             icon="mingcute:arrow-right-fill"
             className="w-7 h-7 font-bold"
           />
-        </div>
+        </a>
       </div>
     </div>
   );

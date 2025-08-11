@@ -1,6 +1,8 @@
 import React from "react";
 import hero from "@/assets/images/loans-hero.png";
 import noise from "@/assets/images/loans-noise.png";
+import { Button } from "../ui/button";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 interface LoansHeroProps {
   type: "loan" | "investment";
@@ -39,13 +41,31 @@ const LoansHero: React.FC<LoansHeroProps> = ({ type }) => {
         </div>
 
         {/* Right Text Content */}
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[100%]">
             {heading}
           </h1>
           <p className="text-gray-600 text-lg md:text-xl lg:text-2xl leading-[150%]">
             {subText}
           </p>
+          {/* Apply Button */}
+          <div className="w-full mt-5 md:mt-10">
+            <Button
+              onClick={() =>
+                window.open(
+                  "https://digital.foundry-platform.com/ubuntu-capital",
+                  "_blank"
+                )
+              }
+              className="border border-[#225EA6] bg-[#225EA6] text-base p-6 rounded-full"
+            >
+              Apply Now
+              <Icon
+                icon="material-symbols-light:arrow-right-alt-rounded"
+                fontSize={30}
+              />
+            </Button>
+          </div>
         </div>
       </div>
     </section>

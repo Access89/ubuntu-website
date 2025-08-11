@@ -4,16 +4,19 @@ function HeroCards() {
   const cards = [
     {
       title: "Borrow",
+      href: "/loans",
       description:
         "Our digital lending solution, providing your customers with quick and convenient access to the financing they need.",
     },
     {
       title: "Invest",
+      href: "/investments",
       description:
         "Simplified onboarding for businesses and customers with our intuitive, user-friendly digital platform.",
     },
     {
       title: "Loan Calculator",
+      href: "/loans/#loan-calculator",
       description:
         "Expand banking access with our agent network platform, connecting underserved areas to essential financial services through local intermediaries.",
     },
@@ -22,7 +25,8 @@ function HeroCards() {
   return (
     <div className="relative md:absolute inset-x-0 md:bottom-0 xl:-bottom-[10%] max-w-7xl  mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center justify-center gap-4 px-4 z-20 border xl:shadow-lg 2xl:rounded-xl border-[#ACACAC]/50 bg-white pb-6 py-6">
       {cards.map((card, index) => (
-        <div
+        <a
+          href={card.href}
           key={index}
           className="bg-white px-6  max-w-sm h-full md:border-r  w-full sm:w-auto border-[#ACACAC]/50 last:border-0 sm:last:hidden md:last:block"
         >
@@ -34,7 +38,7 @@ function HeroCards() {
           <p className="text-[#575757] leading-[150%] text-base md:textlg line-clamp-2">
             {card.description}
           </p>
-        </div>
+        </a>
       ))}
     </div>
   );
