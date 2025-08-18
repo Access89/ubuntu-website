@@ -9,53 +9,11 @@ const HeroSection = () => {
   const images = [hero_1, hero_2, hero_3];
 
   const content = [
-    // {
-    //   title: (
-    //     <>
-    //       <motion.h1
-    //         className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight drop-shadow-lg"
-    //         initial={{ opacity: 0, y: 20 }}
-    //         animate={{ opacity: 1, y: 0 }}
-    //         transition={{ delay: 0.2, duration: 0.6 }}
-    //       >
-    //         Empowering Growth. <br /> Enabling Dreams.
-    //       </motion.h1>
-    //     </>
-    //   ),
-    //   subText: (
-    //     <>
-    //       <motion.p
-    //         className="mt-4 text-lg sm:text-xl xl:text-2xl text-gray-200 max-w-2xl mx-auto"
-    //         initial={{ opacity: 0, y: 20 }}
-    //         animate={{ opacity: 1, y: 0 }}
-    //         transition={{ delay: 0.5, duration: 0.6 }}
-    //       >
-    //         At Ubuntu Capital Microfinance, we bridge the gap between the banked
-    //         and unbanked with trusted, technology-driven financial solutions for
-    //         individuals and small businesses across Ghana.
-    //       </motion.p>
-
-    //       <motion.div
-    //         className="mt-6"
-    //         initial={{ opacity: 0, y: 20 }}
-    //         animate={{ opacity: 1, y: 0 }}
-    //         transition={{ delay: 0.8, duration: 0.6 }}
-    //       >
-    //         <Link
-    //           to="/loans"
-    //           className="inline-flex items-center gap-2 bg-[#225EA6] text-white px-6 py-3 text-lg font-medium rounded-lg hover:bg-[#1E4F8C] transition duration-300"
-    //         >
-    //           Explore Our Solutions <span>→</span>
-    //         </Link>
-    //       </motion.div>
-    //     </>
-    //   ),
-    // },
     {
       title: (
         <>
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight drop-shadow-lg"
+            className="text-4xl md:text-6xl lg:text-9xl font-bold leading-tight drop-shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}

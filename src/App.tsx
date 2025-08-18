@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SupportPage from './pages/Support';
 import BackToTopButton from './components/shared/BackToTopButton';
 import NotFound from './components/shared/NotFound';
+import Gallery from './pages/gallery';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ const AppContent = () => {
         <Route path="/investments" element={<Investments />} />
         <Route path="/about" element={<About />} />
         <Route path="/support" element={<SupportPage />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

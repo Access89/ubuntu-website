@@ -1,4 +1,4 @@
-import { Icon } from "@iconify/react/dist/iconify.js";
+import { Icon } from '@iconify/react/dist/iconify.js';
 
 export default function SupportPage() {
   return (
@@ -25,7 +25,7 @@ export default function SupportPage() {
                 <div className="bg-white p-8 sm:border-r">
                   <div className="text-[#225EA6] mb-4">
                     <Icon
-                      icon={"ph:building-office-thin"}
+                      icon={'ph:building-office-thin'}
                       className="mx-auto w-15 h-15"
                     />
                   </div>
@@ -38,25 +38,27 @@ export default function SupportPage() {
                 <div className="bg-white p-8 md:border-r">
                   <div className="text-[#225EA6] mb-4">
                     <Icon
-                      icon={"mdi-light:phone"}
+                      icon={'mdi-light:phone'}
                       className="mx-auto w-15 h-15"
                     />
                   </div>
                   <p className="text-lg font-medium">Call Us</p>
-                  <p className="text-gray-700">+233 302 421429</p>
-                  <p className="text-gray-700">+233 507 697966</p>
+                  <p className="text-gray-700">0302547880 </p>
+                  <p className="text-gray-700">0307001796</p>
                 </div>
 
                 <div className="bg-white p-8">
                   <div className="text-[#225EA6] mb-4">
                     <Icon
-                      icon={"guidance:clock"}
+                      icon={'guidance:clock'}
                       className="mx-auto w-15 h-15"
                     />
                   </div>
                   <p className="text-lg font-medium">Working Hours</p>
-                  <p className="text-gray-700">Mon–Fri: 9 AM – 6 PM</p>
-                  <p className="text-gray-700">Saturday: 9 AM – 4 PM</p>
+                  <p className="text-gray-700">
+                    Mon–Fri <br /> 8 AM – 5 PM
+                  </p>
+                  {/* <p className="text-gray-700">Saturday: 9 AM – 4 PM</p> */}
                 </div>
               </div>
             </div>

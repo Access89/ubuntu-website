@@ -139,21 +139,39 @@ export default function Header() {
                 />
               </div>
               <nav className="flex flex-col space-y-4 text-gray-700 font-medium">
-                {navLinks.map((link) => (
-                  <SheetClose asChild>
-                    <Link
-                      key={link.label}
-                      to={link.href}
-                      className={`transition-colors duration-300 ${
-                        pathname === link.href
-                          ? 'text-[#225EA6] font-medium'
-                          : 'hover:text-blue-600 font-light'
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
-                  </SheetClose>
-                ))}
+                {navLinks.map((link) =>
+                  link.href ? (
+                    <SheetClose asChild key={link.label}>
+                      <Link
+                        to={link.href}
+                        className={`transition-colors duration-300 ${
+                          pathname === link.href
+                            ? 'text-[#225EA6] font-medium'
+                            : 'hover:text-blue-600 font-light'
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+                    </SheetClose>
+                  ) : (
+                    <div key={link.label} className="flex flex-col space-y-2">
+                      {link.children?.map((child) => (
+                        <SheetClose asChild key={child.label}>
+                          <Link
+                            to={child.href}
+                            className={`transition-colors duration-300 ${
+                              pathname === child.href
+                                ? 'text-[#225EA6] font-medium'
+                                : 'hover:text-blue-600 font-light'
+                            }`}
+                          >
+                            {child.label}
+                          </Link>
+                        </SheetClose>
+                      ))}
+                    </div>
+                  )
+                )}
               </nav>
             </SheetContent>
           </Sheet>

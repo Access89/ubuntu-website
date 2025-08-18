@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-
+import { Link } from 'react-router-dom';
+import logo from '@/assets/images/header-logo.png';
 export default function Mission() {
   return (
     <section className="lg:pt-24 w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-6 md:px-10 2xl:px-3 md:py-12 bg-white">
       {/* Left - Logo / Brand */}
       <div className="hidden lg:block text-[#754C2A] text-left lg:w-1/2">
-        <div className="border-l-4 md:border-l-8 border-[#754C2A] pl-4 md:pl-6 montserrat py-5">
+        {/* <div className="border-l-4 md:border-l-8 border-[#754C2A] pl-4 md:pl-6 montserrat py-5">
           <h1 className="text-5xl md:text-6xl lg:text-[110px] font-light leading-[101%]">
             The
           </h1>
@@ -15,7 +15,8 @@ export default function Mission() {
           <h1 className="text-5xl md:text-6xl lg:text-[110px] font-light leading-[101%]">
             Center
           </h1>
-        </div>
+        </div> */}
+        <img src={logo} className='lg:h-[300px]' />
       </div>
 
       {/* Right - Content */}

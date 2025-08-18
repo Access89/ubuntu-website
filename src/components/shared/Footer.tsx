@@ -1,22 +1,22 @@
-import { Icon } from "@iconify/react";
-import logo from "@/assets/images/logo.png";
-import { Link } from "react-router-dom";
+import { Icon } from '@iconify/react';
+import logo from '@/assets/images/header-logo.png';
+import { Link } from 'react-router-dom';
 
 const quickLinks = [
-  { label: "Home", href: "/" },
-  { label: "Investment", href: "/investments" },
+  { label: 'Home', href: '/' },
+  { label: 'Investment', href: '/investments' },
   {
-    label: "Loan",
-    href: "/loans",
+    label: 'Loan',
+    href: '/loans',
   },
-  { label: "About Us", href: "/about" },
-  { label: "Support", href: "/support" },
+  { label: 'About Us', href: '/about' },
+  { label: 'Support', href: '/support' },
 ];
 
 const socialLinks = [
-  { icon: "ri:facebook-fill", href: "#" },
-  { icon: "ri:twitter-fill", href: "#" },
-  { icon: "ri:linkedin-box-fill", href: "#" },
+  { icon: 'ri:facebook-fill', href: '#' },
+  { icon: 'ri:twitter-fill', href: '#' },
+  { icon: 'ri:linkedin-box-fill', href: '#' },
 ];
 
 export default function Footer() {
@@ -35,10 +35,10 @@ export default function Footer() {
             <p>www.ubuntucapitalgh.com</p>
           </div>
           <div>
-            <p>P.O. Box CT 4561, Cantonments, Accra Ghana</p>
-            <p># 23 1st Freetown Link Okponglo, Accra, Ghana</p>
+            {/* <p>P.O. Box CT 4561, Cantonments, Accra Ghana</p> */}
+            <p>#23 1st Freetown Link, Okponglo, Accra</p>
           </div>
-          <div>+233 302 421429 · +233 507 697966</div>
+          <div>0302547880 · 0307001796</div>
         </div>
 
         {/* Quick Links */}
