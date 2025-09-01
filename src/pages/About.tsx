@@ -109,7 +109,7 @@ const AboutUs = () => {
   ];
   const boardMembers = [
     {
-      title: 'Chief Executive Officer',
+      title: 'Board Chairman',
       name: 'Mr. Nana Sarfo',
       description: (
         <>
@@ -135,7 +135,7 @@ const AboutUs = () => {
       ),
     },
     {
-      title: 'Managing Director, Banking Operations',
+      title: 'Director',
       name: 'Mr. Kwabena Ayirebi',
       description: (
         <>

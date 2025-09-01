@@ -41,7 +41,7 @@ export default function ImpactSection() {
             <StatItem
               value={8.5}
               suffix="K"
-              label="Customer"
+              label="Customers"
               hasViewed={hasViewed}
             />
             <StatItem
@@ -59,7 +59,7 @@ export default function ImpactSection() {
             <StatItem
               value={120}
               suffix="M"
-              label="Current Money Managed"
+              label="Disbursed Loans"
               hasViewed={hasViewed}
             />
           </div>
